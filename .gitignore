@@ -1,0 +1,12 @@
+# generic files to ignore
+*~
+.DS_Store
+*.swp
+local
+
+# Sass’s cache file
+.sass-cache/
+
+# Production Directory for Grunt
+/sheepshaver/disk_images/
+/sheepshaver/roms/

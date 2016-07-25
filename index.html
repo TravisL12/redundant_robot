@@ -1,151 +1,90 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Guitar Demo</title>
-  <link rel='stylesheet' type='text/css' href='public/css/bootstrap.min.css'>
-  <link rel='stylesheet' type='text/css' href='public/css/font-awesome.min.css'>
-  <link rel='stylesheet' type='text/css' href='public/css/application.css'>
-
-  <script src='public/js/angular.min.js'></script>
-  <script src='public/js/jquery-2.0.3.min.js'></script>
-  <script src='public/js/bootstrap.min.js'></script>
-  <script src='public/js/application.js'></script>
-  <script src='public/js/chords.js'></script>
+	<title>Redundant Robot</title>
+	<link href='https://fonts.googleapis.com/css?family=Catamaran:400,800,900' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='public/css/application.css'>
 </head>
 
 <body>
 
-  <div class='container' ng-app='guitarApp' ng-controller='ChordCtrl' ng-keypress='pressEnter($event)'>
+	<div id='square-grid'></div>
+	<div class='container'>
+		<div class='logo'>
+			<h1>REDUNDANT</h1>
+			<div class='cube-container'>
+				<div class='cube'>
 
-    <h1>Build a Tab!</h1>
+					<div class='side' id='front'>
+						<div class='robot-head'>
+							<div class='left-eye'></div>
+							<div class='right-eye'></div>
+							<div class='left-ear'></div>
+							<div class='right-ear'></div>
+							<div class='mouth'></div>
+						</div>
+						<p>ROBOT</p>
+					</div>
 
-    <div class='row'>
-      <form class='chord-builder-form col-md-2' ng-model='inputForm.inputForm' ng-submit='lookupChord()'>
-        <div class='form-group'>
-          <input class='form-control' id='chord-input' ng-change='lookupChord()' placeholder='Chord Search' ng-model='inputForm.chordInput' maxlength='6'></input>
-        </div>
-<!--
-        <div class='form-group'>
-          <label class='control-label'>Strings:</label>
-          <input class='form-control' id='chord-input' ng-model='inputForm.stringNumbers' maxlength='6'></input>
-        </div>
+					<div class='side' id='back'>
+						<div class='robot-head'>
+							<div class='left-eye'></div>
+							<div class='right-eye'></div>
+							<div class='left-ear'></div>
+							<div class='right-ear'></div>
+							<div class='mouth'></div>
+						</div>
+					</div>
 
-        <div class='form-group'>
-          <label class='control-label'>Frets:</label>
-          <input class='form-control' id='chord-input' ng-model='inputForm.fretNumbers' maxlength='6'></input>
-        </div>
-        <button class='btn btn-default' ng-click='buildRawTab()'>Submit</button> -->
-      </form>
+					<div class='side' id='left'>
+						<div class='robot-head'>
+							<div class='left-eye'></div>
+							<div class='right-eye'></div>
+							<div class='left-ear'></div>
+							<div class='right-ear'></div>
+							<div class='mouth'></div>
+						</div>
+					</div>
 
-      <form class='individual-notes-form col-md-2 form-horizontal' ng-model='inputForm.inputForm' ng-submit='lookupChord()'>
-        <label>
-          <span ng-hide='edit'>Strings:</span>
-          <span class='edit-input' ng-show='edit'>EDIT!!!</span>
-        </label>
+					<div class='side' id='right'>
+						<div class='robot-head'>
+							<div class='left-eye'></div>
+							<div class='right-eye'></div>
+							<div class='left-ear'></div>
+							<div class='right-ear'></div>
+							<div class='mouth'></div>
+						</div>
+					</div>
 
-        <div class='form-group'>
-          <label class="col-md-1 control-label">e:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[5]" maxlength='2'></input>
-          </div>
-        </div>
-        <div class='form-group'>
-          <label class="col-md-1 control-label">B:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[4]" maxlength='2'></input>
-          </div>
-        </div>
-        <div class='form-group'>
-          <label class="col-md-1 control-label">G:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[3]" maxlength='2'></input>
-          </div>
-        </div>
-        <div class='form-group'>
-          <label class="col-md-1 control-label">D:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[2]" maxlength='2'></input>
-          </div>
-        </div>
-        <div class='form-group'>
-          <label class="col-md-1 control-label">A:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[1]" maxlength='2'></input>
-          </div>
-        </div>
-        <div class='form-group'>
-          <label class="col-md-1 control-label">E:</label>
-          <div class='col-md-6'>
-            <input class="form-control" type="text" ng-model="inputForm.stringInput[0]" maxlength='2'></input>
-          </div>
-        </div>
-      </form>
+				</div>
+			</div>
+		</div>
+		<div class='content'>
+			<h3>UPDATE (July 22, 2016)</h3>
+			<p>Hello I am alive and Redundant Robot will finally begin to be updated little by little. I haven't touched the SheepShaver tutorial since I wrote it more than 10 years ago (which is incredible to even type out) but I still get people cruising through and the occasional email asking questions about getting these emulators running. It's really nice to get emails from time to time as I still think it's interesting to talk with random people from across the globe. All in all, the site will not really be getting much updates for the emulator stuff but just wanted to get it out there that I recognize the terrible lag in anything happening here. Though if I ever do get to the more ambitious thoughts that I have, I would love to just integrate an emulator straight into the site and also host some abandonware games for people to check out. Email is fun and all, but if you just want to give a shout out hit me up on <a href='https://twitter.com/travisl12'>twitter instead.</a>. Thanks again!</p>
 
-      <div class="input-buttons col-md-3">
-        <div class='form-group'>
-          <button ng-hide='edit' class='btn btn-default' ng-click="addTab()">Add Tab!</button>
-          <button ng-show='edit' class='btn btn-warning' ng-click="saveEditTab()">SAVE EDIT!</button>
-        </div>
+			<h4>The main reason most of you are here</h4>
+			<ul><li><a href='sheepshaver/'>SheepShaver Tutorial</a></li></ul>
 
-        <div class='break-ct form-group form-inline'>
-          <button class='btn btn-default' ng-click="addMeasure()">Add Break!</button>
-          <input class="form-control" min='0' max='30' type="number" placeholder='Count' value="2" ng-model="inputForm.breakCt" maxlength="2">
-        </div>
-
-        <div class='form-group'>
-          <button class='btn btn-default' ng-click="resetAll()">Reset!</button>
-        </div>
-      </div>
-
-      <div class='filtered-chords col-md-5'>
-        <table class='table table-bordered'>
-          <thead>
-            <th>Name <span ng-show='inputForm.chordInput'>({{(chordLib | filter:inputForm.chordInput).length}} Found)</span></th>
-            <th>Chord</th>
-          </thead>
-          <tbody>
-            <tr ng-click='clickedFilteredChord(match)' ng-show='inputForm.chordInput' ng-repeat='match in chordLib | filter:inputForm.chordInput'>
-              <td class='col-md-6'>{{match.name}}</td>
-              <td class='col-md-6 chord'>{{match.tab.join(' ')}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="tab-body">
-
-      <ul class="user-tab">
-        <li>&nbsp;</li>
-        <li>e|</li>
-        <li>B|</li>
-        <li>G|</li>
-        <li>D|</li>
-        <li>A|</li>
-        <li>E|</li>
-      </ul>
-
-      <ul class="user-tab" ng-repeat='tab in tabs'>
-        <li class='tab-name'>{{tab.chordInput}}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[0] || spacer }}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[1] || spacer }}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[2] || spacer }}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[3] || spacer }}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[4] || spacer }}</li>
-        <li>{{printSpacing(tab.breakCt)}}{{tab.stringInput[5] || spacer }}</li>
-        <li>
-          <ul class='edit-icons'>
-            <li class='note-insert'       ng-click='insertTab();'    title="Insert Chord"></li>
-            <li class='note-edit'         ng-click='editTab()'       title="Edit Chord"></li>
-            <li class='note-delete'       ng-click='deleteTab();'    title="Delete Chord"></li>
-            <li class='note-measure-up'   ng-click='editMeasure(1);' title="Increase Measure"></li>
-            <li class='note-measure-down' ng-click='editMeasure(0);' title="Decrease Measure"></li>
-            <li class='measure-count'>({{tab.breakCt}})</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-
+			<h4>Some Demos I've been working on</h4>
+			<ul>
+				<li><a href='digital_clock/'>Digital Clock Demo in CSS/JS</a></li>
+				<li><a href='key_iano/'>Key-iano (demo)</a></li>
+				<li><a href='tab_builder/'>Build guitar tabs!</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-3896297-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src='public/js/application.js'></script>
 </html>
+

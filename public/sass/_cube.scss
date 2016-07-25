@@ -1,0 +1,103 @@
+$cube-size: 125px;
+$cube-transform: $cube-size/2;
+
+.cube-container {
+  display: inline-block;
+  vertical-align: top;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+
+  .cube {
+    position: relative;
+    width: $cube-size;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+
+    animation: spin 5s infinite linear;
+    animation-timing-function: cubic-bezier(.39,-0.34,.52,1.5);
+    animation-iteration-count: 5;
+
+    .side {
+      position: absolute;
+      width: $cube-size;
+      height: $cube-size;
+      background: gray;
+      box-sizing: border-box;
+      border: 4px solid white;
+
+      box-shadow: inset 0 0 1px rgba(0,0,0,.8),
+                  inset 0 2px 0 rgba(255,255,255,.5),
+                  inset 0 -1px 0 rgba(0,0,0,.4);
+
+      p {
+        @include catamaran-font(400);
+        margin: 0;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+#front {
+  transform: translateZ($cube-transform);
+}
+
+#left {
+  transform: rotateY(270deg) translateX(-$cube-transform);
+  transform-origin: center left;
+  .robot-head { 
+    .mouth:after {
+      border-color: blue;
+      transform: rotateZ(-13deg);
+    }
+  }
+}
+
+#back {
+  transform: translateZ(-$cube-transform) rotateY(180deg);
+  .robot-head { 
+    .mouth {
+      height: 35%;
+      &:after {
+        $back-color: lightseagreen;
+        border: 2px solid $back-color;
+        border-radius: 50%;
+        height: 13px;
+        width: 13px;
+      }
+    }
+  }
+}
+
+#right {
+  transform: rotateY(-270deg) translateX($cube-transform);
+  transform-origin: top right;
+  .robot-head { 
+    .mouth {
+      height: 35%;
+      &:after {
+        $back-color: green;
+        border: 2px solid $back-color;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        height: 13px;
+        width: 18px;
+      }
+    }
+  }
+}
+
+// Elements not seen on cube DELETE LATER
+// #top, #bottom {
+//   line-height: 150px;
+//   text-align: center;
+// }
+// #top {
+//   transform: rotateX(-90deg) translateY(-$cube-transform);
+//   transform-origin: top center;
+// }
+// #bottom {
+//   transform: rotateX(90deg) translateY($cube-transform);
+//   transform-origin: bottom center;
+// }
+
