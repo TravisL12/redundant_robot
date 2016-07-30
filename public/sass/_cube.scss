@@ -40,12 +40,14 @@ $cube-transform: $cube-size/2;
 
 #front {
   transform: translateZ($cube-transform);
+  @include build-robot(60px, $color-5);
 }
 
 #left {
   transform: rotateY(270deg) translateX(-$cube-transform);
   transform-origin: center left;
-  .robot-head { 
+  @include build-robot(60px, $color-2);
+  .robot-head {
     .mouth:after {
       border-color: blue;
       transform: rotateZ(-13deg);
@@ -55,7 +57,8 @@ $cube-transform: $cube-size/2;
 
 #back {
   transform: translateZ(-$cube-transform) rotateY(180deg);
-  .robot-head { 
+  @include build-robot(60px, $color-4);
+  .robot-head {
     .mouth {
       height: 35%;
       &:after {
@@ -72,7 +75,8 @@ $cube-transform: $cube-size/2;
 #right {
   transform: rotateY(-270deg) translateX($cube-transform);
   transform-origin: top right;
-  .robot-head { 
+  @include build-robot(60px, $color-2);
+  .robot-head {
     .mouth {
       height: 35%;
       &:after {
