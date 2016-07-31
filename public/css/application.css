@@ -464,8 +464,8 @@ ul {
 
 .container {
   position: relative;
-  padding: 50px 50px 0;
-  margin-left: 50px;
+  padding: 50px;
+  margin-left: 100px;
   width: 60%;
   height: 100vh;
   background: rgba(255, 255, 255, 0.55); }
