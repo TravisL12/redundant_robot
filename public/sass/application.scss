@@ -35,19 +35,19 @@ ul {
 
 .background-robot {
   position: fixed;
-  right: 50px;
+  margin: 0 auto;
+  width: 100%;
   z-index: -1;
-  opacity: 0.5;
   @include build-robot(500px, $color-1);
 }
 
 .container {
   position: relative;
   padding: 50px;
-  margin-left: 100px;
+  margin: 0 auto;
   width: 60%;
   height: 100vh;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.6);
   .logo {
     text-align: center;
     h1 {
