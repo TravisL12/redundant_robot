@@ -5,15 +5,16 @@
 	<link href='https://fonts.googleapis.com/css?family=Catamaran:400,800,900' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='public/css/application.css'>
 	<link rel="icon" type="image/png" sizes="92x92" href="favicon.png">
+	<base href="/">
 </head>
 
 <body ng-app='redundantRobot'>
-	<div ng-view=''></div>
+	<div ui-view=''></div>
 </body>
 
 <!-- <script src='public/js/application.js'></script> -->
 <script src='public/js/vendors/angular.min.js'></script>
-<script src='public/js/vendors/angular-route.min.js'></script>
+<script src='public/js/vendors/angular-ui-router.min.js'></script>
 <script src='public/js/app.js'></script>
 
 <script>

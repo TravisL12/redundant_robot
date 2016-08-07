@@ -1,14 +1,15 @@
 'use strict';
 
-angular.module('redundantRobot', ['ngRoute'])
-  .config(function ($routeProvider) {
+angular.module('redundantRobot', ['ui.router'])
+  .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
 
-    $routeProvider
-    .when('/', {
+    $locationProvider.html5Mode(true);
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+    .state('home', {
+      url: '/',
       templateUrl: 'public/views/home.html'
     })
-    .otherwise({
-      redirectTo: '/'
-    });
 
   });
