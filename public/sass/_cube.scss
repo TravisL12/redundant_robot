@@ -90,18 +90,3 @@ $cube-transform: $cube-size/2;
     }
   }
 }
-
-// Elements not seen on cube DELETE LATER
-// #top, #bottom {
-//   line-height: 150px;
-//   text-align: center;
-// }
-// #top {
-//   transform: rotateX(-90deg) translateY(-$cube-transform);
-//   transform-origin: top center;
-// }
-// #bottom {
-//   transform: rotateX(90deg) translateY($cube-transform);
-//   transform-origin: bottom center;
-// }
-

@@ -4,88 +4,18 @@
 	<title>Redundant Robot</title>
 	<link href='https://fonts.googleapis.com/css?family=Catamaran:400,800,900' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='public/css/application.css'>
-	<link rel="icon" type="image/png" sizes="92x92" href="/favicon.png">
+	<link rel="icon" type="image/png" sizes="92x92" href="favicon.png">
 </head>
 
-<body>
-
-	<!-- <div id='square-grid'></div> -->
-	<div class='background-robot'>
-		<div class='robot-head'>
-			<div class='left-eye'></div>
-			<div class='right-eye'></div>
-			<div class='left-ear'></div>
-			<div class='right-ear'></div>
-			<div class='mouth'></div>
-		</div>
-	</div>
-
-	<div class='container'>
-		<div class='logo'>
-			<div class='cube-container'>
-				<div class='cube'>
-
-					<div class='side' id='front'>
-						<div class='robot-head'>
-							<div class='left-eye'></div>
-							<div class='right-eye'></div>
-							<div class='left-ear'></div>
-							<div class='right-ear'></div>
-							<div class='mouth'></div>
-						</div>
-						<p>REDUNDANT</p>
-					</div>
-
-					<div class='side' id='back'>
-						<div class='robot-head'>
-							<div class='left-eye'></div>
-							<div class='right-eye'></div>
-							<div class='left-ear'></div>
-							<div class='right-ear'></div>
-							<div class='mouth'></div>
-						</div>
-					</div>
-
-					<div class='side' id='left'>
-						<div class='robot-head'>
-							<div class='left-eye'></div>
-							<div class='right-eye'></div>
-							<div class='left-ear'></div>
-							<div class='right-ear'></div>
-							<div class='mouth'></div>
-						</div>
-					</div>
-
-					<div class='side' id='right'>
-						<div class='robot-head'>
-							<div class='left-eye'></div>
-							<div class='right-eye'></div>
-							<div class='left-ear'></div>
-							<div class='right-ear'></div>
-							<div class='mouth'></div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<h1>ROBOT</h1>
-		</div>
-		<div class='content'>
-			<h3>UPDATE (July 22, 2016)</h3>
-			<p>Hello I am alive and Redundant Robot will finally begin to be updated little by little. I haven't touched the SheepShaver tutorial since I wrote it more than 10 years ago (which is incredible to even type out) but I still get people cruising through and the occasional email asking questions about getting these emulators running. It's really nice to get emails from time to time as I still think it's interesting to talk with random people from across the globe. All in all, the site will not really be getting much updates for the emulator stuff but just wanted to get it out there that I recognize the terrible lag in anything happening here. Though if I ever do get to the more ambitious thoughts that I have, I would love to just integrate an emulator straight into the site and also host some abandonware games for people to check out. Email is fun and all, but if you just want to give a shout out hit me up on <a href='https://twitter.com/travisl12'>twitter instead.</a>. Thanks again!</p>
-
-			<h4>The main reason most of you are here</h4>
-			<ul><li><a href='sheepshaver/'>SheepShaver Tutorial</a></li></ul>
-
-			<h4>Some Demos I've been working on</h4>
-			<ul>
-				<li><a href='digital_clock/'>Digital Clock Demo in CSS/JS</a></li>
-				<li><a href='key_iano/'>Key-iano (demo)</a></li>
-				<li><a href='tab_builder/'>Build guitar tabs!</a></li>
-			</ul>
-		</div>
-	</div>
+<body ng-app='redundantRobot'>
+	<div ng-view=''></div>
 </body>
+
+<!-- <script src='public/js/application.js'></script> -->
+<script src='public/js/vendors/angular.min.js'></script>
+<script src='public/js/vendors/angular-route.min.js'></script>
+<script src='public/js/app.js'></script>
+
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -96,6 +26,5 @@
 	ga('send', 'pageview');
 </script>
 
-<!-- <script src='public/js/application.js'></script> -->
 </html>
 
