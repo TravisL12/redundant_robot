@@ -35,7 +35,7 @@
 	<p>So I will split each Emulator into it's own section so that I don't confuse anyone and also allow you to just get to whatever program you are most interested in.</p>
 	<p>I will begin with the first emulator I got working: Basilisk II.</p>
 	<p>
-		<a href="images/welcome-to-mac.jpg"><img class="alignnone size-medium wp-image-8" title="welcome-to-mac" src="images/welcome-to-mac-300x79.jpg" alt="" width="300" height="79" /></a>
+		<a href="images/welcome-to-mac.jpg"><img class="alignnone size-medium wp-image-8" title="welcome-to-mac" src="public/images/sheepshaver/welcome-to-mac-300x79.jpg" alt="" width="300" height="79" /></a>
 	</p>
 	<p>Alright, to kick it off there are several ways that you can run this Emulator. You can download the Source code and use <a href="http://finkcommander.sourceforge.net/">FinkCommander</a> that uses <a href="http://fink.sourceforge.net/download/">Fink</a> to compile Basilisk II under <a href="http://www.apple.com/downloads/macosx/apple/x11formacosx.html">X11</a>. You can run Basilisk II for Windows (but considering there are already tutorials on how to do that I said F-that). Or you can be smart and do less work and just download the damn thing for Mac OS X and be ready to go as soon as it is done unstuffing.</p>
 	<p><span>NOTE:There is a Basilisk that supports audio but I recommend setting up Basilisk using the non-audio version because the Audio supported version likes to crash when tweaking the preferences.</span></p>
@@ -71,7 +71,7 @@
 	<p>Ok, now if you don't have Classic Mac OS installed on your modern Mac then I cannot guarantee that I have a solution but I will tell you how I figured a way around this.</p>
 	<p>Alright, open up Disk Utility from your Applications folder and go ahead and create a new image of whatever size. Now put your new <em>.DMG</em> file in the directory of Basilisk and you will now have to initialize your new drive by booting up your Macintosh using the Disk Tools.img as your boot device. To do this you will need to enter Basilisk and under preferences add your Drive Image, and the Disk Tools Image.</p>
 	<p>
-		<a href="images/initializedrive.jpg"><img class="alignnone size-medium wp-image-12" title="initializedrive" src="images/initializedrive-300x249.jpg" alt="" width="300" height="249" /></a>
+		<a href="images/initializedrive.jpg"><img class="alignnone size-medium wp-image-12" title="initializedrive" src="public/images/sheepshaver/initializedrive-300x249.jpg" alt="" width="300" height="249" /></a>
 	</p>
 	<p><!--StartFragment--></p>
 	<p>Ok so you should be able to hit save and start the emulator and it will run, eventually giving you this screen.</p>
@@ -79,7 +79,7 @@
 
 	<!--EndFragment-->
 	<p>
-		<a href="images/erasedrive.jpg"><img class="alignnone size-medium wp-image-11" title="erasedrive" src="images/erasedrive-300x150.jpg" alt="" width="300" height="150" /></a>
+		<a href="images/erasedrive.jpg"><img class="alignnone size-medium wp-image-11" title="erasedrive" src="public/images/sheepshaver/erasedrive-300x150.jpg" alt="" width="300" height="150" /></a>
 	</p>
 	<p><!--StartFragment--></p>
 	<p>Alright, and once the initialization is all done you are ready to shut down and prepare for installation of Mac OS onto your Hard Drive Image.</p>
@@ -87,13 +87,13 @@
 	<p><strong>4. Installing Mac OS onto your Disk Image Drive</strong></p>
 	<p>Now assuming that everything is all set with your disk image and you have the correct ROM you can go ahead and install an operating system. I am going to demonstrate using System 7 as provided from Apple's own <a href="http://download.info.apple.com/Apple_Support_Area/Apple_Software_Updates/English-North_American/Macintosh/System/Older_System/System_7.0.x/">FTP files</a>. As I mentioned earlier the Disk Tools disk can be used to make sure that everything will boot correctly. For this purpose I will give a picture of what the Basilisk Preference window should look like and also break down what each preference is.</p>
 	<p>
-		<a href="images/systeminstalldisk.jpg"><img class="alignnone size-medium wp-image-13" title="systeminstalldisk" src="images/systeminstalldisk-300x296.jpg" alt="" width="300" height="296" /></a>
+		<a href="images/systeminstalldisk.jpg"><img class="alignnone size-medium wp-image-13" title="systeminstalldisk" src="public/images/sheepshaver/systeminstalldisk-300x296.jpg" alt="" width="300" height="296" /></a>
 	</p>
 	<p><!--StartFragment--></p>
 	<p>Assuming that everything is setup correctly then the emulator is ready to run (although I'm sure you couldn't help trying it at least once up to this point).</p>
 	<p>Under Preferences&gt;Disk Volumes, the System install disks should be added AND the Disk Image Drive to install onto (Very important!). And then you are able to boot up the system and the desktop should appear with all 6 of the disks located on the desktop and the disc image drive (MacHD in the picture below).</p>
 	<p>
-		<a href="images/basiliskpreference.jpg"><img class="alignnone size-medium wp-image-9" title="basiliskpreference" src="images/basiliskpreference-300x292.jpg" alt="" width="300" height="292" /></a>
+		<a href="images/basiliskpreference.jpg"><img class="alignnone size-medium wp-image-9" title="basiliskpreference" src="public/images/sheepshaver/basiliskpreference-300x292.jpg" alt="" width="300" height="292" /></a>
 	</p>
 	<p><!--StartFragment--></p>
 	<p>From here on it is just a matter of opening up the Install 1 disk and proceeding with the installation, a very fast installation that is. Once the install is complete the disks can be removed from the Disk Volume preferences panel in Basilisk and you are ready to go.</p>

@@ -1,31 +1,41 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-	<title>Redundant Robot</title>
-	<link href='https://fonts.googleapis.com/css?family=Catamaran:400,800,900' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' type='text/css' href='public/css/application.css'>
-	<link rel="icon" type="image/png" sizes="92x92" href="favicon.png">
-	<base href="/">
-</head>
+<html ng-app='redundantRobot'>
+	<head>
+		<title>Redundant Robot</title>
+		<link href='https://fonts.googleapis.com/css?family=Catamaran:400,800,900' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' type='text/css' href='public/css/application.css'>
+		<link rel="icon" type="image/png" sizes="92x92" href="favicon.png">
+		<base href="/">
+	</head>
 
-<body ng-app='redundantRobot'>
-	<div ui-view=''></div>
-</body>
+	<body>
+		<div class='background-robot'>
+			<div class='robot-head'>
+				<div class='left-eye'></div>
+				<div class='right-eye'></div>
+				<div class='left-ear'></div>
+				<div class='right-ear'></div>
+				<div class='mouth'></div>
+			</div>
+		</div>
 
-<!-- <script src='public/js/application.js'></script> -->
-<script src='public/js/vendors/angular.min.js'></script>
-<script src='public/js/vendors/angular-ui-router.min.js'></script>
-<script src='public/js/app.js'></script>
+		<div class='container' ui-view='container'></div>
+	</body>
 
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<!-- <script src='public/js/application.js'></script> -->
+	<script src='public/js/vendors/angular.min.js'></script>
+	<script src='public/js/vendors/angular-ui-router.min.js'></script>
+	<script src='public/js/app.js'></script>
 
-	ga('create', 'UA-3896297-1', 'auto');
-	ga('send', 'pageview');
-</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-3896297-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </html>
 

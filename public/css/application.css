@@ -467,7 +467,7 @@ ul {
   padding: 50px;
   margin: 0 auto;
   width: 60%;
-  height: 100vh;
+  min-height: 100vh;
   background: rgba(255, 255, 255, 0.6); }
   .container .logo {
     text-align: center; }
