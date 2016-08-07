@@ -16,6 +16,7 @@ $color-5: #C0D8E0; // light blue/purple
 
 body {
   margin: 0;
+  background-color: $color-4;
   background-image: linear-gradient($color-4, $color-2);
 }
 

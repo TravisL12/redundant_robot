@@ -396,6 +396,7 @@
     transform: rotate3d(0, 1, 0, -80deg); } }
 body {
   margin: 0;
+  background-color: #D4EAC8;
   background-image: linear-gradient(#D4EAC8, #778E6F); }
 
 p {
