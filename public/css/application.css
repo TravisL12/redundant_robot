@@ -396,9 +396,7 @@
     transform: rotate3d(0, 1, 0, -80deg); } }
 body {
   margin: 0;
-  background-image: linear-gradient(#D4EAC8, #778E6F); }
-
-p {
+  background-color: #D4EAC8;
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
   font-weight: 900;
   font-weight: 400; }
@@ -467,8 +465,24 @@ ul {
   padding: 50px;
   margin: 0 auto;
   width: 60%;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.6); }
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.75); }
+  .container .sheepshaver {
+    font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+    font-weight: 900;
+    font-weight: 400; }
+    .container .sheepshaver .logo h1 {
+      font-size: 80px; }
+    .container .sheepshaver ul {
+      list-style: disc;
+      padding-left: 20px; }
+    .container .sheepshaver .text {
+      margin: 10px 0; }
+    .container .sheepshaver .image-container {
+      width: 100%;
+      text-align: center; }
+      .container .sheepshaver .image-container img {
+        max-width: 100%; }
   .container .logo {
     text-align: center; }
     .container .logo h1 {

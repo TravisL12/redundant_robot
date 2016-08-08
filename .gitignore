@@ -8,5 +8,5 @@ local
 .sass-cache/
 
 # Production Directory for Grunt
-/sheepshaver/disk_images/
-/sheepshaver/roms/
+/sheepshaver_files/disk_images/
+/sheepshaver_files/roms/
