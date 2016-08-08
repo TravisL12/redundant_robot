@@ -397,9 +397,6 @@
 body {
   margin: 0;
   background-color: #D4EAC8;
-  background-image: linear-gradient(#D4EAC8, #778E6F); }
-
-p {
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
   font-weight: 900;
   font-weight: 400; }
