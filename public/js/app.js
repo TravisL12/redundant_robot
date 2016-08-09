@@ -1,14 +1,16 @@
 'use strict';
 
 angular.module('redundantRobot', ['ui.router'])
-  .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 
-    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
     .state('redundant', {
-      abstract: true
+      abstract: true,
+      views: {
+        'header': { templateUrl: 'public/views/header.html' }
+      }
     })
     .state('redundant.home', {
       url: '/',

@@ -13,12 +13,20 @@ $color-5: #C0D8E0; // light blue/purple
 @import 'animations.scss';
 @import 'cube.scss';
 @import 'grid.scss';
+@import 'header.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
 
 body {
   margin: 0;
   background-color: $color-4;
-  @include catamaran-font;
-  font-weight: 400;
+  @include catamaran-font(400);
 }
 
 ul {
@@ -40,9 +48,10 @@ ul {
 
 .container {
   position: relative;
+  font-size: 1.6rem;
   padding: 50px;
   margin: 0 auto;
-  width: 60%;
+  width: 65%;
   min-height: 100vh;
   background: rgba(255,255,255,0.75);
   @import 'sheepshaver.scss';

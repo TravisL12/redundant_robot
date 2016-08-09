@@ -62,7 +62,7 @@
 
 #front {
   transform: translateZ(62.5px); }
-  #front .eye, #front .robot-head .left-eye, #front .robot-head .right-eye, #left .robot-head #front .left-eye, #left .robot-head #front .right-eye, #back .robot-head #front .left-eye, #back .robot-head #front .right-eye, #right .robot-head #front .left-eye, #right .robot-head #front .right-eye, .background-robot .robot-head #front .left-eye, .background-robot .robot-head #front .right-eye {
+  #front .eye, #front .robot-head .left-eye, #front .robot-head .right-eye, #left .robot-head #front .left-eye, #left .robot-head #front .right-eye, #back .robot-head #front .left-eye, #back .robot-head #front .right-eye, #right .robot-head #front .left-eye, #right .robot-head #front .right-eye, .header .header-container .robot-head #front .left-eye, .header .header-container .robot-head #front .right-eye, .background-robot .robot-head #front .left-eye, .background-robot .robot-head #front .right-eye {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
@@ -70,28 +70,28 @@
     width: 20%;
     height: 23%;
     border-radius: 50%; }
-  #front .ear, #front .robot-head .left-ear, #front .robot-head .right-ear, #left .robot-head #front .left-ear, #left .robot-head #front .right-ear, #back .robot-head #front .left-ear, #back .robot-head #front .right-ear, #right .robot-head #front .left-ear, #right .robot-head #front .right-ear, .background-robot .robot-head #front .left-ear, .background-robot .robot-head #front .right-ear {
+  #front .ear, #front .robot-head .left-ear, #front .robot-head .right-ear, #left .robot-head #front .left-ear, #left .robot-head #front .right-ear, #back .robot-head #front .left-ear, #back .robot-head #front .right-ear, #right .robot-head #front .left-ear, #right .robot-head #front .right-ear, .header .header-container .robot-head #front .left-ear, .header .header-container .robot-head #front .right-ear, .background-robot .robot-head #front .left-ear, .background-robot .robot-head #front .right-ear {
     position: absolute;
     height: 0;
     width: 0;
     top: 30%;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent; }
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent; }
   #front .robot-head {
     position: relative;
     background: radial-gradient(white, #C0D8E0 75%);
-    width: 68.4px;
-    height: 60px;
+    width: 71.25px;
+    height: 62.5px;
     border-radius: 8% 8% 3% 3%;
-    margin: 24px auto 0; }
+    margin: 25px auto 0; }
     #front .robot-head .left-ear {
-      border-left: 12px solid transparent;
-      border-right: 12px solid #C0D8E0;
-      left: -24px; }
+      border-left: 12.5px solid transparent;
+      border-right: 12.5px solid #C0D8E0;
+      left: -25px; }
     #front .robot-head .right-ear {
-      border-right: 12px solid transparent;
-      border-left: 12px solid #C0D8E0;
-      right: -24px; }
+      border-right: 12.5px solid transparent;
+      border-left: 12.5px solid #C0D8E0;
+      right: -25px; }
     #front .robot-head .left-eye {
       left: 20%; }
     #front .robot-head .right-eye {
@@ -105,14 +105,14 @@
       #front .robot-head .mouth:after {
         content: '';
         display: inline-block;
-        border-top: 2.4px solid red;
+        border-top: 2.5px solid red;
         width: 35%;
         height: 100%; }
 
 #left {
   transform: rotateY(270deg) translateX(-62.5px);
   transform-origin: center left; }
-  #left .eye, #front .robot-head #left .left-eye, #front .robot-head #left .right-eye, #left .robot-head .left-eye, #left .robot-head .right-eye, #back .robot-head #left .left-eye, #back .robot-head #left .right-eye, #right .robot-head #left .left-eye, #right .robot-head #left .right-eye, .background-robot .robot-head #left .left-eye, .background-robot .robot-head #left .right-eye {
+  #left .eye, #front .robot-head #left .left-eye, #front .robot-head #left .right-eye, #left .robot-head .left-eye, #left .robot-head .right-eye, #back .robot-head #left .left-eye, #back .robot-head #left .right-eye, #right .robot-head #left .left-eye, #right .robot-head #left .right-eye, .header .header-container .robot-head #left .left-eye, .header .header-container .robot-head #left .right-eye, .background-robot .robot-head #left .left-eye, .background-robot .robot-head #left .right-eye {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
@@ -120,28 +120,28 @@
     width: 20%;
     height: 23%;
     border-radius: 50%; }
-  #left .ear, #front .robot-head #left .left-ear, #front .robot-head #left .right-ear, #left .robot-head .left-ear, #left .robot-head .right-ear, #back .robot-head #left .left-ear, #back .robot-head #left .right-ear, #right .robot-head #left .left-ear, #right .robot-head #left .right-ear, .background-robot .robot-head #left .left-ear, .background-robot .robot-head #left .right-ear {
+  #left .ear, #front .robot-head #left .left-ear, #front .robot-head #left .right-ear, #left .robot-head .left-ear, #left .robot-head .right-ear, #back .robot-head #left .left-ear, #back .robot-head #left .right-ear, #right .robot-head #left .left-ear, #right .robot-head #left .right-ear, .header .header-container .robot-head #left .left-ear, .header .header-container .robot-head #left .right-ear, .background-robot .robot-head #left .left-ear, .background-robot .robot-head #left .right-ear {
     position: absolute;
     height: 0;
     width: 0;
     top: 30%;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent; }
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent; }
   #left .robot-head {
     position: relative;
     background: radial-gradient(white, #778E6F 75%);
-    width: 68.4px;
-    height: 60px;
+    width: 71.25px;
+    height: 62.5px;
     border-radius: 8% 8% 3% 3%;
-    margin: 24px auto 0; }
+    margin: 25px auto 0; }
     #left .robot-head .left-ear {
-      border-left: 12px solid transparent;
-      border-right: 12px solid #778E6F;
-      left: -24px; }
+      border-left: 12.5px solid transparent;
+      border-right: 12.5px solid #778E6F;
+      left: -25px; }
     #left .robot-head .right-ear {
-      border-right: 12px solid transparent;
-      border-left: 12px solid #778E6F;
-      right: -24px; }
+      border-right: 12.5px solid transparent;
+      border-left: 12.5px solid #778E6F;
+      right: -25px; }
     #left .robot-head .left-eye {
       left: 20%; }
     #left .robot-head .right-eye {
@@ -155,7 +155,7 @@
       #left .robot-head .mouth:after {
         content: '';
         display: inline-block;
-        border-top: 2.4px solid red;
+        border-top: 2.5px solid red;
         width: 35%;
         height: 100%; }
   #left .robot-head .mouth:after {
@@ -164,7 +164,7 @@
 
 #back {
   transform: translateZ(-62.5px) rotateY(180deg); }
-  #back .eye, #front .robot-head #back .left-eye, #front .robot-head #back .right-eye, #left .robot-head #back .left-eye, #left .robot-head #back .right-eye, #back .robot-head .left-eye, #back .robot-head .right-eye, #right .robot-head #back .left-eye, #right .robot-head #back .right-eye, .background-robot .robot-head #back .left-eye, .background-robot .robot-head #back .right-eye {
+  #back .eye, #front .robot-head #back .left-eye, #front .robot-head #back .right-eye, #left .robot-head #back .left-eye, #left .robot-head #back .right-eye, #back .robot-head .left-eye, #back .robot-head .right-eye, #right .robot-head #back .left-eye, #right .robot-head #back .right-eye, .header .header-container .robot-head #back .left-eye, .header .header-container .robot-head #back .right-eye, .background-robot .robot-head #back .left-eye, .background-robot .robot-head #back .right-eye {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
@@ -172,28 +172,28 @@
     width: 20%;
     height: 23%;
     border-radius: 50%; }
-  #back .ear, #front .robot-head #back .left-ear, #front .robot-head #back .right-ear, #left .robot-head #back .left-ear, #left .robot-head #back .right-ear, #back .robot-head .left-ear, #back .robot-head .right-ear, #right .robot-head #back .left-ear, #right .robot-head #back .right-ear, .background-robot .robot-head #back .left-ear, .background-robot .robot-head #back .right-ear {
+  #back .ear, #front .robot-head #back .left-ear, #front .robot-head #back .right-ear, #left .robot-head #back .left-ear, #left .robot-head #back .right-ear, #back .robot-head .left-ear, #back .robot-head .right-ear, #right .robot-head #back .left-ear, #right .robot-head #back .right-ear, .header .header-container .robot-head #back .left-ear, .header .header-container .robot-head #back .right-ear, .background-robot .robot-head #back .left-ear, .background-robot .robot-head #back .right-ear {
     position: absolute;
     height: 0;
     width: 0;
     top: 30%;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent; }
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent; }
   #back .robot-head {
     position: relative;
     background: radial-gradient(white, #D4EAC8 75%);
-    width: 68.4px;
-    height: 60px;
+    width: 71.25px;
+    height: 62.5px;
     border-radius: 8% 8% 3% 3%;
-    margin: 24px auto 0; }
+    margin: 25px auto 0; }
     #back .robot-head .left-ear {
-      border-left: 12px solid transparent;
-      border-right: 12px solid #D4EAC8;
-      left: -24px; }
+      border-left: 12.5px solid transparent;
+      border-right: 12.5px solid #D4EAC8;
+      left: -25px; }
     #back .robot-head .right-ear {
-      border-right: 12px solid transparent;
-      border-left: 12px solid #D4EAC8;
-      right: -24px; }
+      border-right: 12.5px solid transparent;
+      border-left: 12.5px solid #D4EAC8;
+      right: -25px; }
     #back .robot-head .left-eye {
       left: 20%; }
     #back .robot-head .right-eye {
@@ -207,7 +207,7 @@
       #back .robot-head .mouth:after {
         content: '';
         display: inline-block;
-        border-top: 2.4px solid red;
+        border-top: 2.5px solid red;
         width: 35%;
         height: 100%; }
   #back .robot-head .mouth {
@@ -221,7 +221,7 @@
 #right {
   transform: rotateY(-270deg) translateX(62.5px);
   transform-origin: top right; }
-  #right .eye, #front .robot-head #right .left-eye, #front .robot-head #right .right-eye, #left .robot-head #right .left-eye, #left .robot-head #right .right-eye, #back .robot-head #right .left-eye, #back .robot-head #right .right-eye, #right .robot-head .left-eye, #right .robot-head .right-eye, .background-robot .robot-head #right .left-eye, .background-robot .robot-head #right .right-eye {
+  #right .eye, #front .robot-head #right .left-eye, #front .robot-head #right .right-eye, #left .robot-head #right .left-eye, #left .robot-head #right .right-eye, #back .robot-head #right .left-eye, #back .robot-head #right .right-eye, #right .robot-head .left-eye, #right .robot-head .right-eye, .header .header-container .robot-head #right .left-eye, .header .header-container .robot-head #right .right-eye, .background-robot .robot-head #right .left-eye, .background-robot .robot-head #right .right-eye {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
@@ -229,28 +229,28 @@
     width: 20%;
     height: 23%;
     border-radius: 50%; }
-  #right .ear, #front .robot-head #right .left-ear, #front .robot-head #right .right-ear, #left .robot-head #right .left-ear, #left .robot-head #right .right-ear, #back .robot-head #right .left-ear, #back .robot-head #right .right-ear, #right .robot-head .left-ear, #right .robot-head .right-ear, .background-robot .robot-head #right .left-ear, .background-robot .robot-head #right .right-ear {
+  #right .ear, #front .robot-head #right .left-ear, #front .robot-head #right .right-ear, #left .robot-head #right .left-ear, #left .robot-head #right .right-ear, #back .robot-head #right .left-ear, #back .robot-head #right .right-ear, #right .robot-head .left-ear, #right .robot-head .right-ear, .header .header-container .robot-head #right .left-ear, .header .header-container .robot-head #right .right-ear, .background-robot .robot-head #right .left-ear, .background-robot .robot-head #right .right-ear {
     position: absolute;
     height: 0;
     width: 0;
     top: 30%;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent; }
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent; }
   #right .robot-head {
     position: relative;
     background: radial-gradient(white, #778E6F 75%);
-    width: 68.4px;
-    height: 60px;
+    width: 71.25px;
+    height: 62.5px;
     border-radius: 8% 8% 3% 3%;
-    margin: 24px auto 0; }
+    margin: 25px auto 0; }
     #right .robot-head .left-ear {
-      border-left: 12px solid transparent;
-      border-right: 12px solid #778E6F;
-      left: -24px; }
+      border-left: 12.5px solid transparent;
+      border-right: 12.5px solid #778E6F;
+      left: -25px; }
     #right .robot-head .right-ear {
-      border-right: 12px solid transparent;
-      border-left: 12px solid #778E6F;
-      right: -24px; }
+      border-right: 12.5px solid transparent;
+      border-left: 12.5px solid #778E6F;
+      right: -25px; }
     #right .robot-head .left-eye {
       left: 20%; }
     #right .robot-head .right-eye {
@@ -264,7 +264,7 @@
       #right .robot-head .mouth:after {
         content: '';
         display: inline-block;
-        border-top: 2.4px solid red;
+        border-top: 2.5px solid red;
         width: 35%;
         height: 100%; }
   #right .robot-head .mouth {
@@ -394,11 +394,74 @@
     transform: rotate3d(0, 1, 0, 80deg); }
   75% {
     transform: rotate3d(0, 1, 0, -80deg); } }
+.header {
+  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background: white;
+  padding: 20px 0; }
+  .header .header-container {
+    width: 80%;
+    margin: 0 auto; }
+    .header .header-container h1 {
+      margin: 0; }
+    .header .header-container .eye, .header .header-container #front .robot-head .left-eye, #front .robot-head .header .header-container .left-eye, .header .header-container #front .robot-head .right-eye, #front .robot-head .header .header-container .right-eye, .header .header-container #left .robot-head .left-eye, #left .robot-head .header .header-container .left-eye, .header .header-container #left .robot-head .right-eye, #left .robot-head .header .header-container .right-eye, .header .header-container #back .robot-head .left-eye, #back .robot-head .header .header-container .left-eye, .header .header-container #back .robot-head .right-eye, #back .robot-head .header .header-container .right-eye, .header .header-container #right .robot-head .left-eye, #right .robot-head .header .header-container .left-eye, .header .header-container #right .robot-head .right-eye, #right .robot-head .header .header-container .right-eye, .header .header-container .robot-head .left-eye, .header .header-container .robot-head .right-eye, .background-robot .robot-head .header .header-container .left-eye, .background-robot .robot-head .header .header-container .right-eye {
+      position: absolute;
+      background: yellow;
+      border: 1px solid gold;
+      top: 20%;
+      width: 20%;
+      height: 23%;
+      border-radius: 50%; }
+    .header .header-container .ear, .header .header-container #front .robot-head .left-ear, #front .robot-head .header .header-container .left-ear, .header .header-container #front .robot-head .right-ear, #front .robot-head .header .header-container .right-ear, .header .header-container #left .robot-head .left-ear, #left .robot-head .header .header-container .left-ear, .header .header-container #left .robot-head .right-ear, #left .robot-head .header .header-container .right-ear, .header .header-container #back .robot-head .left-ear, #back .robot-head .header .header-container .left-ear, .header .header-container #back .robot-head .right-ear, #back .robot-head .header .header-container .right-ear, .header .header-container #right .robot-head .left-ear, #right .robot-head .header .header-container .left-ear, .header .header-container #right .robot-head .right-ear, #right .robot-head .header .header-container .right-ear, .header .header-container .robot-head .left-ear, .header .header-container .robot-head .right-ear, .background-robot .robot-head .header .header-container .left-ear, .background-robot .robot-head .header .header-container .right-ear {
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: 30%;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent; }
+    .header .header-container .robot-head {
+      position: relative;
+      background: radial-gradient(white, #C0D8E0 75%);
+      width: 114px;
+      height: 100px;
+      border-radius: 8% 8% 3% 3%;
+      margin: 40px auto 0; }
+      .header .header-container .robot-head .left-ear {
+        border-left: 20px solid transparent;
+        border-right: 20px solid #C0D8E0;
+        left: -40px; }
+      .header .header-container .robot-head .right-ear {
+        border-right: 20px solid transparent;
+        border-left: 20px solid #C0D8E0;
+        right: -40px; }
+      .header .header-container .robot-head .left-eye {
+        left: 20%; }
+      .header .header-container .robot-head .right-eye {
+        right: 20%; }
+      .header .header-container .robot-head .mouth {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 25%;
+        text-align: center; }
+        .header .header-container .robot-head .mouth:after {
+          content: '';
+          display: inline-block;
+          border-top: 4px solid red;
+          width: 35%;
+          height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
 body {
   margin: 0;
   background-color: #D4EAC8;
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
-  font-weight: 900;
   font-weight: 400; }
 
 ul {
@@ -413,7 +476,7 @@ ul {
   margin: 0 auto;
   width: 100%;
   z-index: -1; }
-  .background-robot .eye, .background-robot #front .robot-head .left-eye, #front .robot-head .background-robot .left-eye, .background-robot #front .robot-head .right-eye, #front .robot-head .background-robot .right-eye, .background-robot #left .robot-head .left-eye, #left .robot-head .background-robot .left-eye, .background-robot #left .robot-head .right-eye, #left .robot-head .background-robot .right-eye, .background-robot #back .robot-head .left-eye, #back .robot-head .background-robot .left-eye, .background-robot #back .robot-head .right-eye, #back .robot-head .background-robot .right-eye, .background-robot #right .robot-head .left-eye, #right .robot-head .background-robot .left-eye, .background-robot #right .robot-head .right-eye, #right .robot-head .background-robot .right-eye, .background-robot .robot-head .left-eye, .background-robot .robot-head .right-eye {
+  .background-robot .eye, .background-robot #front .robot-head .left-eye, #front .robot-head .background-robot .left-eye, .background-robot #front .robot-head .right-eye, #front .robot-head .background-robot .right-eye, .background-robot #left .robot-head .left-eye, #left .robot-head .background-robot .left-eye, .background-robot #left .robot-head .right-eye, #left .robot-head .background-robot .right-eye, .background-robot #back .robot-head .left-eye, #back .robot-head .background-robot .left-eye, .background-robot #back .robot-head .right-eye, #back .robot-head .background-robot .right-eye, .background-robot #right .robot-head .left-eye, #right .robot-head .background-robot .left-eye, .background-robot #right .robot-head .right-eye, #right .robot-head .background-robot .right-eye, .background-robot .header .header-container .robot-head .left-eye, .header .header-container .robot-head .background-robot .left-eye, .background-robot .header .header-container .robot-head .right-eye, .header .header-container .robot-head .background-robot .right-eye, .background-robot .robot-head .left-eye, .background-robot .robot-head .right-eye {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
@@ -421,7 +484,7 @@ ul {
     width: 20%;
     height: 23%;
     border-radius: 50%; }
-  .background-robot .ear, .background-robot #front .robot-head .left-ear, #front .robot-head .background-robot .left-ear, .background-robot #front .robot-head .right-ear, #front .robot-head .background-robot .right-ear, .background-robot #left .robot-head .left-ear, #left .robot-head .background-robot .left-ear, .background-robot #left .robot-head .right-ear, #left .robot-head .background-robot .right-ear, .background-robot #back .robot-head .left-ear, #back .robot-head .background-robot .left-ear, .background-robot #back .robot-head .right-ear, #back .robot-head .background-robot .right-ear, .background-robot #right .robot-head .left-ear, #right .robot-head .background-robot .left-ear, .background-robot #right .robot-head .right-ear, #right .robot-head .background-robot .right-ear, .background-robot .robot-head .left-ear, .background-robot .robot-head .right-ear {
+  .background-robot .ear, .background-robot #front .robot-head .left-ear, #front .robot-head .background-robot .left-ear, .background-robot #front .robot-head .right-ear, #front .robot-head .background-robot .right-ear, .background-robot #left .robot-head .left-ear, #left .robot-head .background-robot .left-ear, .background-robot #left .robot-head .right-ear, #left .robot-head .background-robot .right-ear, .background-robot #back .robot-head .left-ear, #back .robot-head .background-robot .left-ear, .background-robot #back .robot-head .right-ear, #back .robot-head .background-robot .right-ear, .background-robot #right .robot-head .left-ear, #right .robot-head .background-robot .left-ear, .background-robot #right .robot-head .right-ear, #right .robot-head .background-robot .right-ear, .background-robot .header .header-container .robot-head .left-ear, .header .header-container .robot-head .background-robot .left-ear, .background-robot .header .header-container .robot-head .right-ear, .header .header-container .robot-head .background-robot .right-ear, .background-robot .robot-head .left-ear, .background-robot .robot-head .right-ear {
     position: absolute;
     height: 0;
     width: 0;
@@ -462,9 +525,10 @@ ul {
 
 .container {
   position: relative;
+  font-size: 1.6rem;
   padding: 50px;
   margin: 0 auto;
-  width: 60%;
+  width: 65%;
   min-height: 100vh;
   background: rgba(255, 255, 255, 0.75); }
   .container .sheepshaver {
