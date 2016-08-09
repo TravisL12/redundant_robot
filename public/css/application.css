@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
 @keyframes spin {
   0%, 10% {
     transform: rotateY(0); }
@@ -395,16 +401,26 @@
   75% {
     transform: rotate3d(0, 1, 0, -80deg); } }
 .header {
+  position: fixed;
+  top: 0;
+  height: 10rem;
+  width: 100%;
+  z-index: 2000;
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px 0; }
   .header .header-container {
     width: 80%;
     margin: 0 auto; }
+    .header .header-container a {
+      color: black; }
     .header .header-container h1 {
-      margin: 0; }
+      margin: 0;
+      display: inline-block;
+      vertical-align: 12px;
+      margin-left: 2rem; }
     .header .header-container .eye, .header .header-container #front .robot-head .left-eye, #front .robot-head .header .header-container .left-eye, .header .header-container #front .robot-head .right-eye, #front .robot-head .header .header-container .right-eye, .header .header-container #left .robot-head .left-eye, #left .robot-head .header .header-container .left-eye, .header .header-container #left .robot-head .right-eye, #left .robot-head .header .header-container .right-eye, .header .header-container #back .robot-head .left-eye, #back .robot-head .header .header-container .left-eye, .header .header-container #back .robot-head .right-eye, #back .robot-head .header .header-container .right-eye, .header .header-container #right .robot-head .left-eye, #right .robot-head .header .header-container .left-eye, .header .header-container #right .robot-head .right-eye, #right .robot-head .header .header-container .right-eye, .header .header-container .robot-head .left-eye, .header .header-container .robot-head .right-eye, .background-robot .robot-head .header .header-container .left-eye, .background-robot .robot-head .header .header-container .right-eye {
       position: absolute;
       background: yellow;
@@ -418,23 +434,23 @@
       height: 0;
       width: 0;
       top: 30%;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent; }
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent; }
     .header .header-container .robot-head {
       position: relative;
       background: radial-gradient(white, #C0D8E0 75%);
-      width: 114px;
-      height: 100px;
+      width: 57px;
+      height: 50px;
       border-radius: 8% 8% 3% 3%;
-      margin: 40px auto 0; }
+      margin: 20px auto 0; }
       .header .header-container .robot-head .left-ear {
-        border-left: 20px solid transparent;
-        border-right: 20px solid #C0D8E0;
-        left: -40px; }
+        border-left: 10px solid transparent;
+        border-right: 10px solid #C0D8E0;
+        left: -20px; }
       .header .header-container .robot-head .right-ear {
-        border-right: 20px solid transparent;
-        border-left: 20px solid #C0D8E0;
-        right: -40px; }
+        border-right: 10px solid transparent;
+        border-left: 10px solid #C0D8E0;
+        right: -20px; }
       .header .header-container .robot-head .left-eye {
         left: 20%; }
       .header .header-container .robot-head .right-eye {
@@ -448,15 +464,29 @@
         .header .header-container .robot-head .mouth:after {
           content: '';
           display: inline-block;
-          border-top: 4px solid red;
+          border-top: 2px solid red;
           width: 35%;
           height: 100%; }
+    .header .header-container .robot-head {
+      display: inline-block;
+      margin: 0; }
 
-* {
-  box-sizing: border-box; }
-
-html {
-  font-size: 10px; }
+.sheepshaver {
+  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+  font-weight: 900;
+  font-weight: 400; }
+  .sheepshaver .logo h1 {
+    font-size: 80px; }
+  .sheepshaver ul {
+    list-style: disc;
+    padding-left: 20px; }
+  .sheepshaver .text {
+    margin: 10px 0; }
+  .sheepshaver .image-container {
+    width: 100%;
+    text-align: center; }
+    .sheepshaver .image-container img {
+      max-width: 100%; }
 
 body {
   margin: 0;
@@ -470,6 +500,18 @@ ul {
   list-style: none; }
   ul li {
     text-decoration: none; }
+
+.logo {
+  text-align: center; }
+  .logo h1 {
+    display: inline-block;
+    font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+    font-weight: 900;
+    font-size: 11rem;
+    line-height: 13.5rem;
+    margin: 0;
+    margin-left: 50px;
+    text-shadow: -4px -4px 4px #e8e8e8, 2px 2px 2px #bcbcbc, 4px 4px 4px #9c9c9c; }
 
 .background-robot {
   position: fixed;
@@ -526,39 +568,13 @@ ul {
 .container {
   position: relative;
   font-size: 1.6rem;
-  padding: 50px;
-  margin: 0 auto;
+  padding: 2rem 5rem;
+  margin: 10rem auto 0;
   width: 65%;
   min-height: 100vh;
   background: rgba(255, 255, 255, 0.75); }
-  .container .sheepshaver {
-    font-family: 'Catamaran', 'Helvetica neue', sans-serif;
-    font-weight: 900;
-    font-weight: 400; }
-    .container .sheepshaver .logo h1 {
-      font-size: 80px; }
-    .container .sheepshaver ul {
-      list-style: disc;
-      padding-left: 20px; }
-    .container .sheepshaver .text {
-      margin: 10px 0; }
-    .container .sheepshaver .image-container {
-      width: 100%;
-      text-align: center; }
-      .container .sheepshaver .image-container img {
-        max-width: 100%; }
-  .container .logo {
-    text-align: center; }
-    .container .logo h1 {
-      display: inline-block;
-      font-family: 'Catamaran', 'Helvetica neue', sans-serif;
-      font-weight: 900;
-      font-size: 110px;
-      line-height: 135px;
-      margin: 0;
-      margin-left: 50px;
-      text-shadow: -4px -4px 4px #e8e8e8, 2px 2px 2px #bcbcbc, 4px 4px 4px #9c9c9c; }
-  .container .content h4 {
-    margin-bottom: 0; }
+
+.home-content h4 {
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=application.css.map */

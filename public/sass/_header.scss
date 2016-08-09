@@ -1,12 +1,27 @@
 .header {
+  position: fixed;
+  top: 0;
+  height: $header-height;
+  width: 100%;
+  z-index: 2000;
   @include catamaran-font(400);
   font-size: 1.6rem;
-  background: white;
+  background: rgba(255,255,255,0.9);
   padding: 20px 0;
   .header-container {
     width: 80%;
     margin: 0 auto;
-    h1 { margin: 0; }
-    @include build-robot(100px, $color-5);
+    a { color: black; }
+    h1 {
+      margin: 0;
+      display: inline-block;
+      vertical-align: 12px;
+      margin-left: 2rem;
+    }
+    @include build-robot(50px, $color-5);
+    .robot-head {
+      display: inline-block;
+      margin: 0;
+    }
   }
 }

@@ -1,8 +1,12 @@
+* { box-sizing: border-box; }
+html { font-size: 10px; }
+
 $color-1: #56A3A6; // cadet blue
 $color-2: #778E6F; // camoflage green
 $color-3: #A6EAB1; // light green/yellow
 $color-4: #D4EAC8; // tea green
 $color-5: #C0D8E0; // light blue/purple
+$header-height: 10rem;
 
 @mixin catamaran-font($weight:900) {
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
@@ -14,14 +18,7 @@ $color-5: #C0D8E0; // light blue/purple
 @import 'cube.scss';
 @import 'grid.scss';
 @import 'header.scss';
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
+@import 'sheepshaver.scss';
 
 body {
   margin: 0;
@@ -38,6 +35,19 @@ ul {
   }
 }
 
+.logo {
+  text-align: center;
+  h1 {
+    display: inline-block;
+    @include catamaran-font;
+    font-size: 11rem;
+    line-height: 13.5rem;
+    margin: 0;
+    margin-left: 50px;
+    text-shadow: -4px -4px 4px #e8e8e8, 2px 2px 2px #bcbcbc, 4px 4px 4px #9c9c9c;
+  }
+}
+
 .background-robot {
   position: fixed;
   margin: 0 auto;
@@ -49,26 +59,13 @@ ul {
 .container {
   position: relative;
   font-size: 1.6rem;
-  padding: 50px;
-  margin: 0 auto;
+  padding: 2rem 5rem;
+  margin: $header-height auto 0;
   width: 65%;
   min-height: 100vh;
   background: rgba(255,255,255,0.75);
-  @import 'sheepshaver.scss';
-  .logo {
-    text-align: center;
-    h1 {
-      display: inline-block;
-      @include catamaran-font;
-      font-size: 110px;
-      line-height: 135px;
-      margin: 0;
-      margin-left: 50px;
+}
 
-      text-shadow: -4px -4px 4px #e8e8e8, 2px 2px 2px #bcbcbc, 4px 4px 4px #9c9c9c;
-    }
-  }
-  .content {
-    h4 { margin-bottom: 0; }
-  }
+.home-content {
+  h4 { margin-bottom: 0; }
 }
