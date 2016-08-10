@@ -11,12 +11,22 @@
   .header-container {
     width: 80%;
     margin: 0 auto;
-    a { color: black; }
-    h1 {
-      margin: 0;
+    .home-title {  
       display: inline-block;
-      vertical-align: 12px;
       margin-left: 2rem;
+      color: black;
+      a { color: inherit; }
+      h1 {
+        margin: 0;
+        color: inherit;
+        letter-spacing: -0.12rem;
+        line-height: 3rem;
+      }
+      h1.header-accent-color {
+        color: #d80b0b;
+        text-shadow: 0.2rem 0.2rem 0.2rem black;
+        letter-spacing: 2rem;
+      }
     }
     @include build-robot(50px, $color-5);
     .robot-head {

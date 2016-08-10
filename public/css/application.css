@@ -4,6 +4,9 @@
 html {
   font-size: 10px; }
 
+a {
+  text-decoration: none; }
+
 @keyframes spin {
   0%, 10% {
     transform: rotateY(0); }
@@ -414,13 +417,21 @@ html {
   .header .header-container {
     width: 80%;
     margin: 0 auto; }
-    .header .header-container a {
-      color: black; }
-    .header .header-container h1 {
-      margin: 0;
+    .header .header-container .home-title {
       display: inline-block;
-      vertical-align: 12px;
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      color: black; }
+      .header .header-container .home-title a {
+        color: inherit; }
+      .header .header-container .home-title h1 {
+        margin: 0;
+        color: inherit;
+        letter-spacing: -0.12rem;
+        line-height: 3rem; }
+      .header .header-container .home-title h1.header-accent-color {
+        color: #d80b0b;
+        text-shadow: 0.2rem 0.2rem 0.2rem black;
+        letter-spacing: 2rem; }
     .header .header-container .eye, .header .header-container #front .robot-head .left-eye, #front .robot-head .header .header-container .left-eye, .header .header-container #front .robot-head .right-eye, #front .robot-head .header .header-container .right-eye, .header .header-container #left .robot-head .left-eye, #left .robot-head .header .header-container .left-eye, .header .header-container #left .robot-head .right-eye, #left .robot-head .header .header-container .right-eye, .header .header-container #back .robot-head .left-eye, #back .robot-head .header .header-container .left-eye, .header .header-container #back .robot-head .right-eye, #back .robot-head .header .header-container .right-eye, .header .header-container #right .robot-head .left-eye, #right .robot-head .header .header-container .left-eye, .header .header-container #right .robot-head .right-eye, #right .robot-head .header .header-container .right-eye, .header .header-container .robot-head .left-eye, .header .header-container .robot-head .right-eye, .background-robot .robot-head .header .header-container .left-eye, .background-robot .robot-head .header .header-container .right-eye {
       position: absolute;
       background: yellow;
