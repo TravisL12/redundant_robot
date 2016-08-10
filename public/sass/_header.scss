@@ -15,7 +15,6 @@
       display: inline-block;
       margin-left: 2rem;
       color: black;
-      a { color: inherit; }
       h1 {
         margin: 0;
         color: inherit;
@@ -23,8 +22,8 @@
         line-height: 3rem;
       }
       h1.header-accent-color {
-        color: #d80b0b;
-        text-shadow: 0.2rem 0.2rem 0.2rem black;
+        color: $color-6;
+        text-shadow: 0.2rem 0.2rem 0.05rem black;
         letter-spacing: 2rem;
       }
     }

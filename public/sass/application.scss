@@ -1,12 +1,16 @@
 * { box-sizing: border-box; }
 html { font-size: 10px; }
-a { text-decoration: none; }
+a {
+  color: black;
+  text-decoration: none;
+}
 
 $color-1: #56A3A6; // cadet blue
 $color-2: #778E6F; // camoflage green
 $color-3: #A6EAB1; // light green/yellow
 $color-4: #D4EAC8; // tea green
 $color-5: #C0D8E0; // light blue/purple
+$color-6: #D80B0B; // red title
 $header-height: 10rem;
 
 @mixin catamaran-font($weight:900) {
