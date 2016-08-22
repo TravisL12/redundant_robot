@@ -6,11 +6,14 @@
   z-index: 2000;
   @include catamaran-font(400);
   font-size: 1.6rem;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255, 0.95);
   padding: 20px 0;
+  box-shadow: 0 0px 10px 0px rgba(0,0,0,0.5);
+
   .header-container {
     width: 80%;
     margin: 0 auto;
+
     .home-title {  
       display: inline-block;
       margin-left: 2rem;
@@ -27,7 +30,9 @@
         letter-spacing: 2rem;
       }
     }
+
     @include build-robot(50px, $color-5);
+
     .robot-head {
       display: inline-block;
       margin: 0;

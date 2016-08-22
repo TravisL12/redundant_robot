@@ -27,7 +27,7 @@ $header-height: 10rem;
 
 body {
   margin: 0;
-  background-color: $color-4;
+  background-color: $color-1;
   @include catamaran-font(400);
 }
 
@@ -55,17 +55,18 @@ ul {
 
 .background-robot {
   position: fixed;
-  margin: 0 auto;
+  margin: 20rem auto;
   width: 100%;
   z-index: -1;
-  @include build-robot(500px, $color-1);
+  @include build-robot(300px, $color-1);
 }
 
 .container {
   position: relative;
   font-size: 1.6rem;
   padding: 2rem 5rem;
-  margin: $header-height auto 0;
+  margin: 0 auto;
+  padding-top: $header-height;
   width: 65%;
   min-height: 100vh;
   background: rgba(255,255,255,0.75);
