@@ -581,12 +581,24 @@ ul {
   font-size: 1.6rem;
   padding: 2rem 5rem;
   margin: 0 auto;
-  padding-top: 10rem;
+  padding-top: 13rem;
   width: 65%;
   min-height: 100vh;
   background: rgba(255, 255, 255, 0.75); }
 
 .home-content h4 {
   margin-bottom: 0; }
+.home-content .demo-stuff {
+  clear: both; }
+  .home-content .demo-stuff p {
+    margin: 0; }
+  .home-content .demo-stuff .link {
+    width: 10rem;
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 2rem; }
+    .home-content .demo-stuff .link img {
+      width: 100%;
+      vertical-align: top; }
 
 /*# sourceMappingURL=application.css.map */
