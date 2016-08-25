@@ -65,11 +65,11 @@ ul {
 
 .background-robot {
   position: fixed;
-  margin: 25rem auto;
+  margin: 30rem auto;
   width: 100%;
   z-index: -1;
-  opacity: 0.4;
-  @include build-robot(300px, $color-1);
+  opacity: 0.3;
+  @include build-robot(250px, $color-1);
 }
 
 .container {
