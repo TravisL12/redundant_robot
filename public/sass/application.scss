@@ -120,9 +120,6 @@ ul {
     ul.social-icons {
       li {
         & + li { margin-left: 1rem; }
-        img {
-          width: 4rem;
-        }
       }
     }
   }
