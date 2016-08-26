@@ -522,7 +522,7 @@ a {
 
 body {
   margin: 0;
-  background: linear-gradient(#56A3A6, #778E6F);
+  background: #778E6F;
   font-family: 'Catamaran', 'Helvetica neue', sans-serif;
   font-weight: 400;
   color: #fff; }
@@ -617,6 +617,8 @@ ul {
     margin: 0; }
   .home-content .demo-stuff a {
     border-bottom: 0; }
+  .home-content .demo-stuff .description p {
+    font-size: 1.6rem; }
   .home-content .demo-stuff .link {
     width: 10rem;
     float: left;

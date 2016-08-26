@@ -36,7 +36,7 @@ a {
 
 body {
   margin: 0;
-  background: linear-gradient($color-1, $color-2);
+  background: $color-2;
   @include catamaran-font(400);
   color: #fff;
 }
@@ -91,6 +91,9 @@ ul {
     clear: both;
     p { margin: 0; }
     a { border-bottom: 0; }
+    .description {
+      p { font-size: 1.6rem; }
+    }
     .link {
       width: 10rem;
       float: left;
