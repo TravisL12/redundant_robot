@@ -24,5 +24,11 @@ angular.module('redundantRobot', ['ui.router'])
         'container@': { templateUrl: 'public/views/sheepshaver.html' }
       }
     })
+    .state('redundant.about', {
+      url: '/about',
+      views: {
+        'container@': { templateUrl: 'public/views/about.html' }
+      }
+    })
 
   });
