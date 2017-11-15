@@ -49,12 +49,5 @@
         letter-spacing: 2rem;
       }
     }
-
-    @include build-robot(50px, $color-5);
-
-    .robot-head {
-      display: inline-block;
-      margin: 0;
-    }
   }
 }

@@ -1,11 +1,36 @@
-$cube-size: 125px;
+$cube-size: 65px;
 $cube-transform: $cube-size/2;
 $robot-size: $cube-size * 0.5;
+
+// Spin and then return to 0
+@keyframes spin {
+  0%, 10%    { transform: rotateY(0); }
+
+  20%        { transform: rotateY(95deg); }
+  21%        { transform: rotateY(85deg); }
+  22%        { transform: rotateY(93deg); }
+  23%        { transform: rotateY(87deg); }
+  25%, 28%   { transform: rotateY(90deg); }
+
+  38%        { transform: rotateY(185deg); }
+  39%        { transform: rotateY(175deg); }
+  40%        { transform: rotateY(183deg); }
+  41%        { transform: rotateY(177deg); }
+  43%, 46%   { transform: rotateY(180deg); }
+
+  56%        { transform: rotateY(275deg); }
+  57%        { transform: rotateY(265deg); }
+  58%        { transform: rotateY(273deg); }
+  59%        { transform: rotateY(267deg); }
+  61%, 64%   { transform: rotateY(270deg); }
+
+  74%, 100%  { transform: rotateY(0deg); }
+}
 
 .cube-container {
   display: inline-block;
   vertical-align: top;
-  perspective: 800px;
+  perspective: 1100px;
   perspective-origin: 50% 100px;
 
   .cube {
@@ -47,7 +72,7 @@ $robot-size: $cube-size * 0.5;
 #left {
   transform: rotateY(270deg) translateX(-$cube-transform);
   transform-origin: center left;
-  @include build-robot($robot-size, $color-2);
+  @include build-robot($robot-size, $color-3);
   .robot-head {
     .mouth:after {
       border-color: blue;
@@ -60,15 +85,8 @@ $robot-size: $cube-size * 0.5;
   transform: translateZ(-$cube-transform) rotateY(180deg);
   @include build-robot($robot-size, $color-4);
   .robot-head {
-    .mouth {
-      height: 35%;
-      &:after {
-        $back-color: lightseagreen;
-        border: 2px solid $back-color;
-        border-radius: 50%;
-        height: 13px;
-        width: 13px;
-      }
+    .mouth:after {
+      border-color: lightseagreen;
     }
   }
 }
@@ -76,18 +94,11 @@ $robot-size: $cube-size * 0.5;
 #right {
   transform: rotateY(-270deg) translateX($cube-transform);
   transform-origin: top right;
-  @include build-robot($robot-size, $color-2);
+  @include build-robot($robot-size, $color-5);
   .robot-head {
-    .mouth {
-      height: 35%;
-      &:after {
-        $back-color: green;
-        border: 2px solid $back-color;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-        height: 13px;
-        width: 18px;
-      }
+    .mouth:after {
+      border-color: green;
+      transform: rotateZ(13deg);
     }
   }
 }

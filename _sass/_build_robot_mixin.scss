@@ -3,7 +3,7 @@
   $eye-side-distance: 20%;
   $eye-top-distance: 20%;
   $ear-thickness: $head-height * 0.20;
-  $lip-thickness: $head-height * 0.04;
+  $lip-thickness: $head-height * 0.01;
 
   .eye {
     position: absolute;
@@ -61,7 +61,7 @@
         display: inline-block;
         border-top: $lip-thickness solid red;
         width: 35%;
-        height: 100%;
+        height: 210%;
       }
     }
   }
