@@ -1,3 +1,7 @@
+---
+---
+// you need these two dotted lines for jekyll!!!
+
 $black:   #4a4a4a;
 $color-1: #56A3A6; // cadet blue
 $color-2: #778E6F; // camoflage green
@@ -27,12 +31,11 @@ a {
   font-weight: $weight;
 }
 
-@import 'robot.scss';
-@import 'animations.scss';
-@import 'cube.scss';
-@import 'grid.scss';
-@import 'header.scss';
-@import 'sheepshaver.scss';
+@import 'build_robot_mixin';
+@import 'spinning_robot_cube';
+@import 'grid';
+@import 'header';
+@import 'sheepshaver';
 
 body {
   margin: 0;
