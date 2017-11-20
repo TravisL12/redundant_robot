@@ -1,0 +1,99 @@
+---
+layout: default
+title:  "Build a Chrome Extension using Webpack, Babel & Yarn"
+date:   2017-11-19 -0800
+categories: webpack chrome_extension
+---
+
+<div class='post-page'>
+  <div class='post-page--title'>
+    <h1>{{page.title}}</h1>
+    <h4>{{page.date}}</h4>
+    <h4>Categories: {{page.categories}}</h4>
+  </div>
+
+  <div class='post-page--body'>
+    <p>
+      Earlier this year I released my first Chrome Extension that replaces the new tab page with the Astronomy Picture of the Day (APOD). Initially I built the extension
+      as both something that I wanted to use, and as an exercise in how to build a chrome extension. It's a pretty simple HTML page with some JS and CSS mixed in, nothing
+      groundbreaking, but I was happy with it.
+    </p>
+
+    <p>
+      I built several features that I thought were particularly fun, all the while doing my best to keep things object oriented. But the amount of variables that were
+      in the global scope always irked me. I knew better than to be sharing instantiated objects so broadly in the global scope but I was being a little lazy and
+      it wasn't that big of a deal.
+    </p>
+
+    <p>
+      Finally I got to a point where if I wanted to continue building out features and making refactoring easier, I knew I needed to get a modern build flow going.
+      I decided to use Webpack and Babel, both because I was just learning how to use these tools at <a href='https://www.tumblr.com' target="_blank">work</a>,
+      as well as a continued learning experience.
+    </p>
+
+    <h3>Beginning the Conversion to Webpack</h3>
+
+    <p>
+      Webpack an Babel have become popular lately for front end build tools, but they also have a reputation of being unneccessarily difficult in regards to
+      their configuration and bootstrapping process. There certainly are plenty of tutorials available these days to walk you through this process but the speed
+      of development of these tools these days can quickly out date tutorials and/or you can't find the right tutorial for specifically what you're tryig to do.
+    </p>
+
+    <p>
+      For my specific case, I wasn't using React or Redux and so I just needed something to help build my project and allow me some of the nicer features of ES6
+      (mainly `import` of dependencies).
+    </p>
+
+    <h3>Getting Started</h3>
+
+    <p>
+      Recently <a href='https://yarnpkg.com/en/'>Yarn</a> has become more widely used and thus I went with that for dependency management. I installed it using
+      `homebrew` which is simply:</p>
+      {% highlight bash %}
+brew install yarn
+      {% endhighlight %}
+      
+      <p>
+        After that was completed I started my new project and began the bootstrapping of the project by adding Webpack; 
+      </p>
+
+      {% highlight bash %}
+yarn add webpack webpack-dev-server path html-webpack-plugin extract-text-webpack-plugin
+
+yarn add copy-webpack-plugin --dev
+      {% endhighlight %}
+
+      <p>
+        I followed this up by adding in my CSS loaders, in which I'm using SASS to compile my stylesheets.
+      </p>
+
+      {% highlight bash %}
+yarn add css-loader sass-loader style-loader
+      {% endhighlight %}
+
+      <p>
+        And then followed that up with Babel
+      </p>
+
+      {% highlight bash %}
+yarn add webpack babel-loader babel-core babel-preset-es2015 --dev
+      {% endhighlight %}
+
+      <p>
+        I then added my `.babelrc` config file to set my presets:
+      </p>
+
+      {% highlight javascript %}
+{
+  "presets":[
+    "es2015"
+  ]
+}
+      {% endhighlight %}
+
+      <p>
+        
+      </p>
+
+  </div>
+</div>

@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid;
+  line-height: 1.5rem;
+  transition: 0.15s all linear;
+  &:hover {
+    color: $color-3;
+  }
+
+  &.no-border {
+    border: 0;
+  }
+}
+
+@mixin catamaran-font($weight:900) {
+  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+  font-weight: $weight;
+}
+
+body {
+  margin: 0;
+  background: $color-2;
+  @include catamaran-font(400);
+  color: #fff;
+}
+
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    text-decoration: none;
+  }
+}

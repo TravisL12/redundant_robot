@@ -1,0 +1,25 @@
+.projects-page {
+
+  .projects-description, 
+  .demo-stuff {
+    margin-bottom: 2rem;
+  }
+
+  .demo-stuff {
+    display: flex;
+
+    .description {
+      flex: 1;
+      font-size: 1.6rem;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      width: 10rem;
+      margin-right: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
