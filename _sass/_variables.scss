@@ -9,3 +9,8 @@ $color-6: #D80B0B; // red title
 
 $header-height: 10rem;
 $page-width: 1200px;
+
+@mixin catamaran-font($weight:900) {
+  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+  font-weight: $weight;
+}

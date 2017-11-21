@@ -5,6 +5,13 @@ html {
   font-size: 10px;
 }
 
+body {
+  margin: 0;
+  background: $color-2;
+  @include catamaran-font(400);
+  color: #fff;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -12,25 +19,15 @@ a {
   border-bottom: 1px solid;
   line-height: 1.5rem;
   transition: 0.15s all linear;
-  &:hover {
-    color: $color-3;
-  }
 
   &.no-border {
     border: 0;
   }
-}
 
-@mixin catamaran-font($weight:900) {
-  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
-  font-weight: $weight;
-}
+  &:hover {
+    color: $color-3;
+  }
 
-body {
-  margin: 0;
-  background: $color-2;
-  @include catamaran-font(400);
-  color: #fff;
 }
 
 h4,
