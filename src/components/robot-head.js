@@ -1,28 +1,28 @@
 import React from "react"
 
 export const RobotHead = () => (
-  <div class="robot-head">
-    <div class="left-eye"></div>
-    <div class="right-eye"></div>
-    <div class="left-ear"></div>
-    <div class="right-ear"></div>
-    <div class="mouth"></div>
+  <div className="robot-head">
+    <div className="left-eye"></div>
+    <div className="right-eye"></div>
+    <div className="left-ear"></div>
+    <div className="right-ear"></div>
+    <div className="mouth"></div>
   </div>
 )
 
 const RobotCube = () => (
-  <div class="cube-container">
-    <div class="cube">
-      <div class="side" id="front">
+  <div className="cube-container">
+    <div className="cube">
+      <div className="side" id="front">
         <RobotHead />
       </div>
-      <div class="side" id="back">
+      <div className="side" id="back">
         <RobotHead />
       </div>
-      <div class="side" id="left">
+      <div className="side" id="left">
         <RobotHead />
       </div>
-      <div class="side" id="right">
+      <div className="side" id="right">
         <RobotHead />
       </div>
     </div>
