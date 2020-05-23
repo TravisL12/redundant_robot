@@ -1,8 +1,8 @@
-@mixin build-robot($head-height:60px, $robot-color:lightblue) {
+@mixin build-robot($head-height: 60px, $robot-color: lightblue) {
   $head-margin: $head-height * 0.4;
   $eye-side-distance: 20%;
   $eye-top-distance: 20%;
-  $ear-thickness: $head-height * 0.20;
+  $ear-thickness: $head-height * 0.2;
   $lip-thickness: $head-height * 0.01;
 
   .eye {
@@ -57,7 +57,7 @@
       height: 25%;
       text-align: center;
       &:after {
-        content: '';
+        content: "";
         display: inline-block;
         border-top: $lip-thickness solid red;
         width: 35%;

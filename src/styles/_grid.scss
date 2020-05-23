@@ -1,7 +1,14 @@
 @mixin set-animation($degree) {
-  0%, 100% { transform: rotate3d(0,1,0,0deg); }
-  25%      { transform: rotate3d(0,1,0,$degree); }
-  75%      { transform: rotate3d(0,1,0,-$degree); }  
+  0%,
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, $degree);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, -$degree);
+  }
 }
 
 @mixin build-animation($animation) {
@@ -11,7 +18,7 @@
 }
 
 $square-dimension: 35px;
-$check-color:   #c4eeff;
+$check-color: #c4eeff;
 $check-color-2: white;
 #square-grid {
   position: fixed;
@@ -27,12 +34,20 @@ $check-color-2: white;
   height: $square-dimension;
   white-space: nowrap;
   &:nth-child(even) .column {
-    &:nth-child(even) .inner-col { background: $check-color; }
-    &:nth-child(odd)  .inner-col { background: $check-color-2; }
+    &:nth-child(even) .inner-col {
+      background: $check-color;
+    }
+    &:nth-child(odd) .inner-col {
+      background: $check-color-2;
+    }
   }
   &:nth-child(odd) .column {
-    &:nth-child(even) .inner-col { background: $check-color-2; }
-    &:nth-child(odd)  .inner-col { background: $check-color; }
+    &:nth-child(even) .inner-col {
+      background: $check-color-2;
+    }
+    &:nth-child(odd) .inner-col {
+      background: $check-color;
+    }
   }
 
   .column {
@@ -56,22 +71,32 @@ $check-color-2: white;
       @for $i from 3 through 8 {
         $i: $i * 10;
         &.rotate-#{$i} {
-          @include build-animation(rotate-square-#{$i})
+          @include build-animation(rotate-square-#{$i});
         }
       }
     }
   }
 }
 
-.red    { background: red; }
-.green  { background: green; }
-.blue   { background: blue; }
-.pink   { background: pink; }
-.yellow { background: yellow; }
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+.pink {
+  background: pink;
+}
+.yellow {
+  background: yellow;
+}
 
 @for $i from 3 through 8 {
   $i: $i * 10;
-  @-webkit-keyframes rotate-square-#{$i} {
+  @keyframes rotate-square-#{$i} {
     @include set-animation(#{$i}deg);
   }
 }

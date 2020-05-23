@@ -1,18 +1,18 @@
----
----
-// you need these two dotted lines for jekyll!!!
-
-$black:   #4a4a4a;
-$color-1: #56A3A6; // cadet blue
-$color-2: #778E6F; // camoflage green
-$color-3: #A6EAB1; // light green/yellow
-$color-4: #D4EAC8; // tea green
-$color-5: #C0D8E0; // light blue/purple
-$color-6: #D80B0B; // red title
+$black: #4a4a4a;
+$color-1: #56a3a6; // cadet blue
+$color-2: #778e6f; // camoflage green
+$color-3: #a6eab1; // light green/yellow
+$color-4: #d4eac8; // tea green
+$color-5: #c0d8e0; // light blue/purple
+$color-6: #d80b0b; // red title
 $header-height: 10rem;
 
-* { box-sizing: border-box; }
-html { font-size: 10px; }
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
 
 a {
   color: #fff;
@@ -26,16 +26,16 @@ a {
   }
 }
 
-@mixin catamaran-font($weight:900) {
-  font-family: 'Catamaran', 'Helvetica neue', sans-serif;
+@mixin catamaran-font($weight: 900) {
+  font-family: "Catamaran", "Helvetica neue", sans-serif;
   font-weight: $weight;
 }
 
-@import 'build_robot_mixin';
-@import 'spinning_robot_cube';
-@import 'grid';
-@import 'header';
-@import 'sheepshaver';
+@import "build_robot_mixin";
+@import "spinning_robot_cube";
+@import "grid";
+@import "header";
+@import "sheepshaver";
 
 body {
   margin: 0;
@@ -92,10 +92,16 @@ ul {
   }
   .demo-stuff {
     clear: both;
-    p { margin: 0; }
-    a { border-bottom: 0; }
+    p {
+      margin: 0;
+    }
+    a {
+      border-bottom: 0;
+    }
     .description {
-      p { font-size: 1.6rem; }
+      p {
+        font-size: 1.6rem;
+      }
     }
     .link {
       width: 10rem;
@@ -107,20 +113,23 @@ ul {
         vertical-align: top;
       }
     }
-
   }
 }
 
 @media (max-width: 1100px) {
- .container {
+  .container {
     width: 100%;
   }
 }
 
 @media (max-width: 800px) {
   .header .header-container {
-    .robot-head { display: none; }
-    .home-title { margin: 0; }
+    .robot-head {
+      display: none;
+    }
+    .home-title {
+      margin: 0;
+    }
   }
 }
 
@@ -128,7 +137,9 @@ ul {
   .header .header-container {
     ul.social-icons {
       li {
-        & + li { margin-left: 1rem; }
+        & + li {
+          margin-left: 1rem;
+        }
       }
     }
   }
