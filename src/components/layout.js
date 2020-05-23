@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "../styles/application.scss"
+import { RobotHead } from "./robot-head"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <div className="background-robot">
+        <RobotHead />
+      </div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
