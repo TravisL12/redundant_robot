@@ -23,7 +23,7 @@ const IndexPage = () => (
         </a>{" "}
         that, for several years, has mainly been home to my SheepShaver
         tutorial. Since becoming a{" "}
-        <a href="/travis_lawrence_resume.pdf">web developer</a>I like to hack
+        <a href="/travis_lawrence_resume.pdf">web developer</a> I like to hack
         away on some of my ideas and post them here for people to check out.
         Feel free to give a shout out on{" "}
         <a href="https://twitter.com/travisl12">twitter</a>, and if you're

@@ -3,10 +3,11 @@
 
 import React from "react"
 
-import GithubSocialMediaLogo from "../images/social/github_social_media_logo.svg"
-import OnlineSocialMediaTwitter from "../images/social/online_social_media_twitter.svg"
-import OnlineSocialMediaLinkedIn from "../images/social/online_social_media_linked_in.svg"
-import EmailMailEnvelopeSendMessage from "../images/social/email_mail_envelope_send_message.svg"
+import GithubSocialMediaLogo from "../images/social/iconfinder_github_317712.svg"
+import OnlineSocialMediaTwitter from "../images/social/iconfinder_twitter_317720.svg"
+import OnlineSocialMediaLinkedIn from "../images/social/iconfinder_square-linkedin_317725.svg"
+import CodePenIcon from "../images/social/codepen_logo.svg"
+import ResumeIcon from "../images/social/resume_logo.svg"
 import RobotCube from "./robot-head"
 
 const Header = ({ siteTitle }) => (
@@ -54,11 +55,13 @@ const Header = ({ siteTitle }) => (
           </a>
         </li>
         <li>
-          <a href="mailto:travis.lawrence12@gmail.com">
-            <img
-              src={EmailMailEnvelopeSendMessage}
-              alt="EmailMailEnvelopeSendMessage"
-            />
+          <a href="https://codepen.io/travisl12">
+            <img src={CodePenIcon} alt="CodePenIcon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://redundantrobot.com/resume">
+            <img src={ResumeIcon} alt="ResumeIcon" />
           </a>
         </li>
       </ul>
