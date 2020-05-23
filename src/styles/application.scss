@@ -85,11 +85,12 @@ ul {
 
 .home-content {
   h4 {
-    margin-bottom: 0;
+    margin: 0;
     text-transform: uppercase;
   }
   .demo-stuff {
-    clear: both;
+    display: flex;
+    margin-bottom: 20px;
     p {
       margin: 0;
     }
@@ -97,18 +98,19 @@ ul {
       border-bottom: 0;
     }
     .description {
+      flex: 1;
+      margin-left: 20px;
       p {
         font-size: 1.6rem;
       }
     }
     .link {
-      width: 10rem;
-      float: left;
-      margin-right: 2rem;
-      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
       img {
         width: 100%;
-        vertical-align: top;
       }
     }
   }
