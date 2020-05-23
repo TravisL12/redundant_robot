@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SheepshaverIcon from "../images/sheepshaver_icon.png"
@@ -22,19 +22,17 @@ const IndexPage = () => (
           is a little site I built
         </a>{" "}
         that, for several years, has mainly been home to my SheepShaver
-        tutorial. Since becoming a{" "}
-        <a href="/travis_lawrence_resume.pdf">web developer</a> I like to hack
-        away on some of my ideas and post them here for people to check out.
-        Feel free to give a shout out on{" "}
-        <a href="https://twitter.com/travisl12">twitter</a>, and if you're
-        curious, you can learn <a href="/about.html">more about me!</a>
+        tutorial. Since becoming a <Link to="/resume">web developer</Link> I
+        like to hack away on some of my ideas and post them here for people to
+        check out. Feel free to give a shout out on{" "}
+        <a href="https://twitter.com/travisl12">twitter</a>.
       </p>
 
       <div className="demo-stuff">
         <div className="link">
-          <a href="/sheepshaver.html">
+          <Link to="/sheepshaver">
             <img src={SheepshaverIcon} alt="SheepshaverIcon" />
-          </a>
+          </Link>
         </div>
         <div className="description">
           <h4>SheepShaver Tutorial</h4>

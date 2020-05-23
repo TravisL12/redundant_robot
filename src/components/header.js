@@ -1,5 +1,4 @@
-// import { Link } from "gatsby"
-// import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import React from "react"
 
@@ -15,10 +14,10 @@ const Header = ({ siteTitle }) => (
     <div className="header-container">
       <RobotCube />
       <div className="home-title">
-        <a href="/index.html">
+        <Link to="/">
           <h1>REDUNDANT</h1>
           <h1 className="header-accent-color">ROBOT</h1>
-        </a>
+        </Link>
       </div>
       <ul className="social-icons">
         <li>
@@ -55,14 +54,18 @@ const Header = ({ siteTitle }) => (
           </a>
         </li>
         <li>
-          <a href="https://codepen.io/travisl12">
+          <a
+            href="https://codepen.io/travisl12"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={CodePenIcon} alt="CodePenIcon" />
           </a>
         </li>
         <li>
-          <a href="https://redundantrobot.com/resume">
+          <Link to="/resume">
             <img src={ResumeIcon} alt="ResumeIcon" />
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
