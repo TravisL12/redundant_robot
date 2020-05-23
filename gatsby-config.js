@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Redundant Robot`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `A wealth of fun and data, A wealth of fun and data, A wealth of fun and data, A wealth of fun and data ... get it ;)`,
     author: `@travisl12`,
   },
   plugins: [
