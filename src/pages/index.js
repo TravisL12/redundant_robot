@@ -34,8 +34,8 @@ const IndexPage = () => (
             <img src={SheepshaverIcon} alt="SheepshaverIcon" />
           </Link>
         </div>
+        <h4>SheepShaver Tutorial</h4>
         <div className="description">
-          <h4>SheepShaver Tutorial</h4>
           <p>
             I wrote this Mac OS emulator tutorial in 2008 during a serious bout
             of graduate school procrastination. It offers up some ROMs that I
@@ -51,8 +51,8 @@ const IndexPage = () => (
             <img src={ApodImg} alt="ApodImg" />
           </a>
         </div>
+        <h4>Astronomy Picture of the Day (APOD) Chrome Extension</h4>
         <div className="description">
-          <h4>Astronomy Picture of the Day (APOD) Chrome Extension</h4>
           <p>
             This is a Chrome extension that replaces your new tab screen with a
             random APOD image. There are multiple key commands and buttons
@@ -69,8 +69,8 @@ const IndexPage = () => (
             <img src={TabImg} alt="TabImg" />
           </a>
         </div>
+        <h4>Build guitar tabs</h4>
         <div className="description">
-          <h4>Build guitar tabs</h4>
           <p>
             I learned to play guitar using guitar tabs of popular songs but I
             was never inspired to write out songs in tablature due to having to
@@ -87,8 +87,8 @@ const IndexPage = () => (
             <img src={PianoImg} alt="PianoImg" />
           </a>
         </div>
+        <h4>Key-iano</h4>
         <div className="description">
-          <h4>Key-iano</h4>
           <p>
             A close friend of mine wanted to learn to play piano by mapping
             piano keys to the keyboard. So I built out this keyboard-piano
@@ -104,8 +104,8 @@ const IndexPage = () => (
             <img src={ClockImg} alt="ClockImg" />
           </a>
         </div>
+        <h4>Digital Clock</h4>
         <div className="description">
-          <h4>Digital Clock</h4>
           <p>
             This was a clock I made using only <tt>&lt;divs&gt;</tt> and CSS
             (with a little JS). The background changes color according to the

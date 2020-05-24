@@ -5,6 +5,22 @@
 }
 
 @media (max-width: 800px) {
+  .home-content {
+    .demo-stuff {
+      grid-template-columns: 80px 1fr;
+      h4 {
+        grid-column: 1 / span 2;
+      }
+
+      .link {
+        align-items: flex-start;
+        padding-top: 5px;
+        grid-column: 1;
+        grid-row: 2;
+      }
+    }
+  }
+
   .header {
     height: 15rem;
 
