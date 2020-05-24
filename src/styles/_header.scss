@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  display: flex;
   top: 0;
   height: $header-height;
   width: 100%;
@@ -7,32 +8,55 @@
   @include catamaran-font(400);
   font-size: 1.6rem;
   background: rgba(255, 255, 255, 0.8);
-  padding: 20px 0;
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.3);
 
   .header-container {
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    ul.social-icons {
-      text-align: center;
-      display: inline-block;
-      float: right;
-      padding: 1rem 0;
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 350px;
+
       li {
-        & + li {
-          margin-left: 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+          span,
+          img {
+            opacity: 1;
+          }
         }
-        display: inline-block;
+
         a {
           border: none;
         }
+
+        span,
+        img {
+          transition: 0.1s linear opacity;
+        }
+
+        span {
+          position: absolute;
+          font-size: 1.4rem;
+          top: 35px;
+          opacity: 0;
+          color: $black;
+        }
+
         img {
           width: 3.5rem;
           transition: 0.2s all linear;
-          &:hover {
-            opacity: 1;
-          }
+          opacity: 0.8;
         }
       }
     }
@@ -51,7 +75,6 @@
       }
       h1.header-accent-color {
         color: $color-6;
-        text-shadow: 0.2rem 0.2rem 0.05rem $black;
         letter-spacing: 2rem;
       }
     }

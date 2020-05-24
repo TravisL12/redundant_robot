@@ -77,13 +77,11 @@ const Resume = () => {
   return (
     <Layout>
       <SEO title="Page two" />
-      <div className=" resume-container">
+      <div className="resume-container">
         <div className="resume">
           <header>
             <div className="name">
-              <div className="header-name">
-                <span className="first">TRAVIS LAWRENCE</span>
-              </div>
+              <div className="header-name">TRAVIS LAWRENCE</div>
               <div className="header-title">Front End Developer</div>
             </div>
             <div className="header-portfolio">

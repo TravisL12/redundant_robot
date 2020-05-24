@@ -15,7 +15,8 @@
 
 .resume-container {
   color: var(--heading-color);
-  background: whitesmoke;
+  background: #fdfff3;
+  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.3);
   width: 8.5in;
   height: 11in;
   margin: 0 auto;
@@ -83,8 +84,9 @@
     line-height: 2.2;
     margin-top: 6px;
 
-    a {
+    li a {
       text-decoration: none;
+      border: none;
       color: inherit;
     }
   }
@@ -192,13 +194,5 @@
     .description {
       line-height: var(--paragraph-line-height);
     }
-  }
-
-  /* Test colors */
-  .test .left-panel {
-    background: lightgray;
-  }
-  .test .right-panel {
-    background: lightblue;
   }
 }
