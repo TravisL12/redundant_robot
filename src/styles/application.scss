@@ -6,6 +6,7 @@ $color-4: #d4eac8; // tea green
 $color-5: #c0d8e0; // light blue/purple
 $color-6: #d80b0b; // red title
 $header-height: 10rem;
+$font-color: $black;
 
 * {
   box-sizing: border-box;
@@ -15,14 +16,14 @@ html {
 }
 
 a {
-  color: #fff;
+  color: $font-color;
   text-decoration: none;
   display: inline-block;
   border-bottom: 1px solid;
   line-height: 1.5rem;
   transition: 0.15s all linear;
   &:hover {
-    color: $color-3;
+    color: $color-1;
   }
 }
 
@@ -40,9 +41,9 @@ a {
 
 body {
   margin: 0;
-  background: $color-2;
+  background: $color-5;
   @include catamaran-font(400);
-  color: #fff;
+  color: $font-color;
 }
 
 ul {

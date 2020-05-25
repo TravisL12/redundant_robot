@@ -4,9 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SheepshaverIcon from "../images/sheepshaver_icon.png"
 import ApodImg from "../images/apod.png"
-import TabImg from "../images/tab.png"
-import PianoImg from "../images/piano.png"
-import ClockImg from "../images/clock.png"
 
 import "../styles/application.scss"
 
@@ -30,7 +27,9 @@ const IndexPage = () => (
 
       <div className="demo-stuff">
         <div className="link">
-          <img src={SheepshaverIcon} alt="SheepshaverIcon" />
+          <Link to="/sheepshaver">
+            <img src={SheepshaverIcon} alt="SheepshaverIcon" />
+          </Link>
         </div>
 
         <h4>
