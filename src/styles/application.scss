@@ -44,6 +44,7 @@ body {
   background: $color-5;
   @include catamaran-font(400);
   color: $font-color;
+  transition: 3s linear background-color;
 }
 
 ul {
