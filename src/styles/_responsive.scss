@@ -8,6 +8,7 @@
   .home-content {
     .demo-stuff {
       grid-template-columns: 80px 1fr;
+
       h4 {
         grid-column: 1 / span 2;
       }
