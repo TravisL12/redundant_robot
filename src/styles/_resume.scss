@@ -1,0 +1,198 @@
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+.resume-container {
+  --main-doc-margin: 30px;
+  --heading-color: #444;
+  --sub-heading-color: #888;
+  --element-spacing: 20px;
+  --thin-border-separator: 1px solid gray;
+  --thick-border-separator: 2px solid gray;
+  --paragraph-line-height: 1.4;
+}
+
+.resume-container {
+  color: var(--heading-color);
+  background: #fdfff3;
+  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.3);
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+
+  p {
+    margin: 0;
+  }
+
+  ul,
+  ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--main-doc-margin);
+    height: 100%;
+  }
+
+  .panel {
+    margin: var(--element-spacing) 0;
+    padding-bottom: var(--element-spacing);
+    border-bottom: var(--thin-border-separator);
+    font-size: 14px;
+
+    &:last-child {
+      border: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+  }
+
+  /* Header name */
+  header {
+    padding: var(--main-doc-margin) 0 calc(var(--main-doc-margin) - 5px);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-name {
+    font-size: 50px;
+    font-weight: 800;
+
+    .name {
+      text-transform: uppercase;
+    }
+  }
+
+  .header-title {
+    color: var(--sub-heading-color);
+  }
+
+  .header-portfolio {
+    font-size: 12px;
+    line-height: 2.2;
+    margin-top: 6px;
+
+    li a {
+      text-decoration: none;
+      border: none;
+      color: inherit;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .github-icon {
+    background: url("../images/resume/GitHub-Mark-32px.png") no-repeat center
+      center;
+    background-size: contain;
+  }
+
+  .codepen-icon {
+    background: url("../images/resume/Button-Black-Large.png") no-repeat center
+      center;
+    background-size: contain;
+  }
+
+  .web-icon {
+    background: url("../images/resume/world-wide-web.png") no-repeat center
+      center;
+    background-size: contain;
+  }
+
+  /* show experince and my mission */
+  .body {
+    display: flex;
+    flex: 1;
+    border-top: var(--thick-border-separator);
+    margin-bottom: var(--main-doc-margin);
+  }
+
+  .body-mission p {
+    margin: 10px 0;
+    line-height: var(--paragraph-line-height);
+  }
+
+  /* Left side */
+  .left-panel {
+    width: 2.5in;
+    border-right: var(--thick-border-separator);
+
+    .panel {
+      margin-right: var(--element-spacing);
+    }
+  }
+
+  .skill-set ul li {
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+
+  .contact ul li {
+    line-height: var(--paragraph-line-height);
+  }
+
+  /* Education */
+  .education p {
+    line-height: var(--paragraph-line-height);
+
+    .year,
+    .location {
+      color: var(--sub-heading-color);
+    }
+  }
+
+  .education-item + .education-item {
+    margin-top: var(--element-spacing);
+  }
+
+  /* Right side */
+  .right-panel {
+    flex: 1;
+
+    .panel {
+      margin-left: var(--element-spacing);
+    }
+  }
+
+  /* Experience */
+  .experience + .experience {
+    padding-top: 20px;
+  }
+
+  .experience {
+    .company,
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .company {
+      font-size: 18px;
+    }
+
+    .title {
+      color: var(--sub-heading-color);
+    }
+
+    .description {
+      line-height: var(--paragraph-line-height);
+    }
+  }
+}
