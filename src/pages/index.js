@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SheepshaverIcon from "../images/sheepshaver_icon.png"
-import ApodImg from "../images/apod.png"
+import Layout from "../components/layout";
+import SheepshaverIcon from "../images/sheepshaver_icon.png";
+import ApodImg from "../images/apod.png";
 
-import "../styles/application.scss"
+import "../styles/application.scss";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
@@ -73,6 +73,6 @@ const IndexPage = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
