@@ -5,34 +5,34 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
-  li {
+  .menu-item {
     padding: 6px 4px;
     box-sizing: border-box;
   }
 
-  & > ul {
+  & > .main-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40px, 100px));
 
-    & > li {
+    & > .menu-item {
       position: relative;
 
       &:hover {
         background: #eee;
 
-        & > ul {
+        & > .sub-menu {
           display: block;
         }
       }
 
-      & > ul {
+      & > .sub-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
 
-        li {
+        .menu-item {
           background: pink;
           width: 100%;
         }

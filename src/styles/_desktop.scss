@@ -9,6 +9,6 @@
 
   .background-robot {
     opacity: 0.3;
-    @include build-robot(250px, $color-1);
+    @include build-robot(300px, $color-1);
   }
 }

@@ -3,40 +3,40 @@ import React from "react";
 const MenuBar = () => {
   return (
     <div className="menu-bar">
-      <ul>
-        <li>
+      <ul className="main-menu">
+        <li className="menu-item">
           <span>File</span>
-          <ul>
-            <li>Item</li>
-            <li>Item 2</li>
+          <ul className="sub-menu">
+            <li className="menu-item">Item</li>
+            <li className="menu-item">Item 2</li>
           </ul>
         </li>
-        <li>
+        <li className="menu-item">
           <span>Edit</span>
-          <ul>
-            <li>Item</li>
-            <li>Item 2</li>
+          <ul className="sub-menu">
+            <li className="menu-item">Item</li>
+            <li className="menu-item">Item 2</li>
           </ul>
         </li>
-        <li>
+        <li className="menu-item">
           <span>View</span>
-          <ul>
-            <li>Item</li>
-            <li>Item 2</li>
+          <ul className="sub-menu">
+            <li className="menu-item">Item</li>
+            <li className="menu-item">Item 2</li>
           </ul>
         </li>
-        <li>
+        <li className="menu-item">
           <span>Window</span>
-          <ul>
-            <li>Item</li>
-            <li>Item 2</li>
+          <ul className="sub-menu">
+            <li className="menu-item">Item</li>
+            <li className="menu-item">Item 2</li>
           </ul>
         </li>
-        <li>
+        <li className="menu-item">
           <span>Special</span>
-          <ul>
-            <li>Item</li>
-            <li>Item 2</li>
+          <ul className="sub-menu">
+            <li className="menu-item">Item</li>
+            <li className="menu-item">Item 2</li>
           </ul>
         </li>
       </ul>
