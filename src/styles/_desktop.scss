@@ -12,3 +12,21 @@
     @include build-robot(300px, $color-1);
   }
 }
+
+.window {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background: #eee;
+
+  .window-title-bar {
+    font-weight: 800;
+    text-align: center;
+    background: #aaa;
+    padding: 3px 0;
+  }
+  .window-body {
+    flex: 1;
+  }
+}

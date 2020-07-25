@@ -29,7 +29,7 @@
     width: $head-height * 1.14;
     height: $head-height;
     border-radius: 8% 8% 3% 3%;
-    // margin: $head-margin auto 0;
+    margin: $head-margin auto 0;
 
     .left-ear {
       @extend .ear;
