@@ -28,9 +28,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app-container">
-      {/* <div className="background-robot">
-        <RobotHead />
-      </div> */}
       <MenuBar />
       <Desktop />
     </div>

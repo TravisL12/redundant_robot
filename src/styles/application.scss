@@ -82,15 +82,6 @@ ul {
   }
 }
 
-.background-robot {
-  position: fixed;
-  margin: 30rem auto;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.3;
-  @include build-robot(250px, $color-1);
-}
-
 .container {
   position: relative;
   font-size: 1.8rem;

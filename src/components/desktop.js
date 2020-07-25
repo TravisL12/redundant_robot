@@ -1,7 +1,14 @@
 import React from "react";
+import { RobotHead } from "./robot-head";
 
-const Desktop = () => {
-  return <div class="desktop"></div>;
+const MenuBar = () => {
+  return (
+    <div className="desktop">
+      <div className="background-robot">
+        <RobotHead />
+      </div>
+    </div>
+  );
 };
 
-export default Desktop;
+export default MenuBar;
