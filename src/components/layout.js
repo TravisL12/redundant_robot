@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header";
+import MenuBar from "./menu-bar";
+import Desktop from "./desktop";
 import "../styles/application.scss";
 import { RobotHead } from "./robot-head";
 
@@ -26,23 +27,13 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
-      <div className="background-robot">
+    <div className="app-container">
+      {/* <div className="background-robot">
         <RobotHead />
-      </div>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1100,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>
-          <div className="container">{children}</div>
-        </main>
-      </div>
-    </>
+      </div> */}
+      <MenuBar />
+      <Desktop />
+    </div>
   );
 };
 

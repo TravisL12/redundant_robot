@@ -11,6 +11,7 @@ $font-color: $black;
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
 }
@@ -35,7 +36,8 @@ a {
 @import "build_robot_mixin";
 @import "spinning_robot_cube";
 @import "grid";
-@import "header";
+@import "menubar";
+@import "desktop";
 @import "sheepshaver";
 @import "resume";
 
@@ -54,6 +56,17 @@ ul {
   li {
     text-decoration: none;
   }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  padding: 2px;
+  box-sizing: border-box;
 }
 
 .logo {

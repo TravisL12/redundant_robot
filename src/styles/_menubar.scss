@@ -1,0 +1,42 @@
+.menu-bar {
+  font-size: 1.4rem;
+  background: white;
+  padding: 0 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  li {
+    padding: 6px 4px;
+    box-sizing: border-box;
+  }
+
+  & > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 100px));
+
+    & > li {
+      position: relative;
+
+      &:hover {
+        background: #eee;
+
+        & > ul {
+          display: block;
+        }
+      }
+
+      & > ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        li {
+          background: pink;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
