@@ -9,22 +9,33 @@ const windows = [
 ];
 
 const Desktop = () => {
-  const [order, setOrder] = useState(windows);
+  const [order, setOrder] = useState(
+    [...Array(windows.length).keys()].map(i => i + 1)
+  );
 
   const updateWindowOrder = currentId => {
-    // this needs to set the z-index, not the render order
-    const latest = order[currentId];
-    const newOrder = [...order];
-    newOrder.splice(currentId, 1);
-    setOrder([latest, ...newOrder]);
+    const previous = order[currentId];
+    const newOrder = order.map((orderVal, windowIdx) => {
+      if (windowIdx === currentId) {
+        return windows.length;
+      } else if (orderVal < previous) {
+        return orderVal;
+      } else {
+        return orderVal - 1;
+      }
+    });
+
+    setOrder(newOrder);
   };
 
   return (
     <div className="desktop">
-      {order.map(({ title, position }, idx) => (
+      {windows.map(({ title, position }, idx) => (
         <DesktopWindow
           key={idx}
           id={idx}
+          order={order[idx]}
+          isActive={order[idx] === windows.length}
           select={updateWindowOrder}
           title={title}
           position={position}
