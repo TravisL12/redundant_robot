@@ -11,6 +11,8 @@ const DesktopWindow = ({ position, title, select, order, id, isActive }) => {
       <div
         className={`window ${isActive ? "active" : ""}`}
         onClick={() => select(id)}
+        role="heading"
+        aria-hidden="true"
         style={{ zIndex: order }}
       >
         <div className="window-title-bar">{title}</div>
