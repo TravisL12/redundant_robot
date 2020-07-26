@@ -6,7 +6,12 @@ const MenuBar = () => {
     { title: "Edit", items: ["Edit Item", "Edit Item 2"] },
     {
       title: "View",
-      items: ["View Item", "View Item 2", "View Item 3", "View Item 4"],
+      items: [
+        "View Item",
+        "View Item 2 that is really long",
+        "View Item 3",
+        "View Item 4",
+      ],
     },
     { title: "Window", items: ["Window Item", "Window Item 2"] },
     { title: "Special", items: ["Special Item", "Special Item 2"] },

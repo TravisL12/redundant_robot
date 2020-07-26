@@ -2,8 +2,8 @@
   font-size: 1.4rem;
   background: white;
   padding: 0 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: $desktop-border-radius;
+  border-top-right-radius: $desktop-border-radius;
 
   .menu-item {
     padding: 6px 4px;
@@ -16,6 +16,7 @@
 
     & > .menu-item {
       position: relative;
+      z-index: 1;
 
       &:hover {
         background: #eee;
@@ -36,6 +37,9 @@
           cursor: pointer;
           background: pink;
           width: 100%;
+          &:hover {
+            background: rgb(255, 146, 164);
+          }
         }
       }
     }
