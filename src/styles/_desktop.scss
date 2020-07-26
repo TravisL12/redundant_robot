@@ -12,11 +12,13 @@
 }
 
 .window {
+  position: absolute;
   display: flex;
   flex-direction: column;
   width: 400px;
   height: 400px;
   background: #eee;
+  box-shadow: -2px 2px 20px 5px rgba(0, 0, 0, 0.2);
 
   .window-title-bar {
     font-weight: 800;
