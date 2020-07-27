@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import DesktopWindow from "./desktopWindow";
 
+function buildOrder(windows) {
+  return [...Array(windows.length).keys()].map(i => i);
+}
+
 const Desktop = ({ windows }) => {
-  const [order, setOrder] = useState(
-    [...Array(windows.length).keys()].map(i => i)
-  );
+  const [order, setOrder] = useState(buildOrder(windows));
+
+  useEffect(() => {
+    updateWindowOrder(windows.length - 1);
+  }, [windows, updateWindowOrder]);
 
   const updateWindowOrder = currentId => {
     // reset size of order array for any new windows added (from useEffect)
-    let newOrder = [...Array(windows.length).keys()].map(i => i);
+    let newOrder = buildOrder(windows);
 
     // map out previous `order` values to newOrder
     order.forEach((order, idx) => (newOrder[idx] = order));
@@ -24,10 +30,6 @@ const Desktop = ({ windows }) => {
 
     setOrder(newOrder);
   };
-
-  useEffect(() => {
-    updateWindowOrder(windows.length - 1);
-  }, [windows]);
 
   return (
     <div className="desktop">
