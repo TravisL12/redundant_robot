@@ -34,6 +34,16 @@
     padding: 3px 0;
   }
 
+  .window-buttons {
+    position: absolute;
+    left: 0;
+
+    button {
+      border: none;
+      background: none;
+    }
+  }
+
   .window-body {
     flex: 1;
   }

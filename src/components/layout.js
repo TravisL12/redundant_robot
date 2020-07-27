@@ -34,11 +34,16 @@ const Layout = ({ children }) => {
   // `);
 
   const openWindow = newWindow => setWindows([...windows, newWindow]);
+  const closeWindow = id => {
+    const newWindows = [...windows];
+    newWindows.splice(id, 1);
+    setWindows(newWindows);
+  };
 
   return (
     <div className="app-container">
       <MenuBar openWindow={openWindow} />
-      <Desktop windows={windows} />
+      <Desktop windows={windows} closeWindow={closeWindow} />
     </div>
   );
 };

@@ -5,12 +5,8 @@ function buildOrder(windows) {
   return [...Array(windows.length).keys()].map(i => i);
 }
 
-const Desktop = ({ windows }) => {
+const Desktop = ({ windows, closeWindow }) => {
   const [order, setOrder] = useState(buildOrder(windows));
-
-  useEffect(() => {
-    updateWindowOrder(windows.length - 1);
-  }, [windows, updateWindowOrder]);
 
   const updateWindowOrder = currentId => {
     // reset size of order array for any new windows added (from useEffect)
@@ -31,6 +27,10 @@ const Desktop = ({ windows }) => {
     setOrder(newOrder);
   };
 
+  useEffect(() => {
+    updateWindowOrder(windows.length - 1);
+  }, [windows]);
+
   return (
     <div className="desktop">
       {windows.map(({ title }, idx) => (
@@ -41,6 +41,7 @@ const Desktop = ({ windows }) => {
           isActive={order[idx] === windows.length}
           select={updateWindowOrder}
           title={title}
+          close={closeWindow}
         />
       ))}
     </div>
