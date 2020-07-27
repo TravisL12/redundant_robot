@@ -18,11 +18,9 @@ const Desktop = () => {
     const newOrder = order.map((orderVal, windowIdx) => {
       if (windowIdx === currentId) {
         return windows.length;
-      } else if (orderVal < previous) {
-        return orderVal;
-      } else {
-        return orderVal - 1;
       }
+
+      return orderVal < previous ? orderVal : orderVal - 1;
     });
 
     setOrder(newOrder);
