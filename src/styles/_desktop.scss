@@ -18,6 +18,8 @@
   flex-direction: column;
   width: 400px;
   height: 400px;
+  resize: both;
+  overflow: scroll;
   background: #eee;
   box-shadow: -2px 2px 20px 5px rgba(0, 0, 0, 0.2);
 

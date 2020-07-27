@@ -1,34 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DesktopWindow from "./desktopWindow";
 
-const windows = [
-  { title: "Home", position: { x: 50, y: 50 } },
-  { title: "Pictures", position: { x: 100, y: 100 } },
-  { title: "Projects", position: { x: 150, y: 150 } },
-  { title: "Demos", position: { x: 200, y: 200 } },
-];
-
-const Desktop = () => {
+const Desktop = ({ windows }) => {
   const [order, setOrder] = useState(
-    [...Array(windows.length).keys()].map(i => i + 1)
+    [...Array(windows.length).keys()].map(i => i)
   );
 
   const updateWindowOrder = currentId => {
-    const previous = order[currentId];
-    const newOrder = order.map((orderVal, windowIdx) => {
+    // reset size of order array for any new windows added (from useEffect)
+    let newOrder = [...Array(windows.length).keys()].map(i => i);
+
+    // map out previous `order` values to newOrder
+    order.forEach((order, idx) => (newOrder[idx] = order));
+
+    // Resort background windows
+    newOrder = newOrder.map((orderVal, windowIdx) => {
       if (windowIdx === currentId) {
         return windows.length;
       }
 
-      return orderVal < previous ? orderVal : orderVal - 1;
+      return orderVal < order[currentId] ? orderVal : orderVal - 1;
     });
 
     setOrder(newOrder);
   };
 
+  useEffect(() => {
+    updateWindowOrder(windows.length - 1);
+  }, [windows]);
+
   return (
     <div className="desktop">
-      {windows.map(({ title, position }, idx) => (
+      {windows.map(({ title }, idx) => (
         <DesktopWindow
           key={idx}
           id={idx}
@@ -36,7 +39,6 @@ const Desktop = () => {
           isActive={order[idx] === windows.length}
           select={updateWindowOrder}
           title={title}
-          position={position}
         />
       ))}
     </div>

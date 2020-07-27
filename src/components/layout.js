@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 // import { useStaticQuery, graphql } from "gatsby";
 
@@ -14,7 +14,15 @@ setInterval(() => {
   colorIdx++;
 }, 8000);
 
+const defaultWindows = [
+  { title: "Home" },
+  { title: "Pictures" },
+  { title: "Projects" },
+  { title: "Demos" },
+];
+
 const Layout = ({ children }) => {
+  const [windows, setWindows] = useState(defaultWindows);
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -25,10 +33,12 @@ const Layout = ({ children }) => {
   //   }
   // `);
 
+  const openWindow = newWindow => setWindows([...windows, newWindow]);
+
   return (
     <div className="app-container">
-      <MenuBar />
-      <Desktop />
+      <MenuBar openWindow={openWindow} />
+      <Desktop windows={windows} />
     </div>
   );
 };

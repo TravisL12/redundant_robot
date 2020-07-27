@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuBar = () => {
+const MenuBar = ({ openWindow }) => {
   const menuItems = [
     { title: "File", items: ["File Item", "File Item 2"] },
     { title: "Edit", items: ["Edit Item", "Edit Item 2"] },
@@ -25,7 +25,11 @@ const MenuBar = () => {
             <span>{menu.title}</span>
             <ul className="sub-menu">
               {menu.items.map((item, jdx) => (
-                <li key={jdx} className="menu-item">
+                <li
+                  key={jdx}
+                  className="menu-item"
+                  onClick={() => openWindow({ title: `${item} blah` })}
+                >
                   {item}
                 </li>
               ))}

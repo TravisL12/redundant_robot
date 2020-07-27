@@ -1,12 +1,18 @@
 import React from "react";
 import Draggable from "react-draggable";
 
-const DesktopWindow = ({ position, title, select, order, id, isActive }) => {
+const DEFAULT_POSITION = 50;
+
+const DesktopWindow = ({ title, select, order, id, isActive }) => {
+  const defaultPosition = DEFAULT_POSITION * (id + 1);
   return (
     <Draggable
       handle=".window-title-bar"
       bounds="parent"
-      defaultPosition={position}
+      defaultPosition={{
+        x: defaultPosition,
+        y: defaultPosition,
+      }}
     >
       <div
         className={`window ${isActive ? "active" : ""}`}
