@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 
 const DEFAULT_POSITION = 50;
 
-const DesktopWindow = ({ title, select, order, id, isActive, close }) => {
+const DesktopWindow = ({ window, select, id, isActive, close }) => {
   const defaultPosition = DEFAULT_POSITION * (id + 1);
   return (
     <Draggable
@@ -19,7 +19,7 @@ const DesktopWindow = ({ title, select, order, id, isActive, close }) => {
         onClick={() => select(id)}
         role="heading"
         aria-hidden="true"
-        style={{ zIndex: order }}
+        style={{ zIndex: window.sort }}
       >
         <div className="window-title-bar">
           <div className="window-buttons">
@@ -27,7 +27,7 @@ const DesktopWindow = ({ title, select, order, id, isActive, close }) => {
               &#x2715;
             </button>
           </div>
-          {title}
+          {window.title}
         </div>
         <div className="window-body"></div>
       </div>

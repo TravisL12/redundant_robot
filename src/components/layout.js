@@ -21,29 +21,51 @@ const defaultWindows = [
   { title: "Demos" },
 ];
 
-const Layout = ({ children }) => {
-  const [windows, setWindows] = useState(defaultWindows);
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `);
+function buildOrder(windows) {
+  return windows.map((window, idx) => ({
+    ...window,
+    sort: window.sort || idx,
+  }));
+}
 
-  const openWindow = newWindow => setWindows([...windows, newWindow]);
+const Layout = () => {
+  const [windows, setWindows] = useState(buildOrder(defaultWindows));
+
+  const openWindow = newWindow => {
+    const updatedWindows = [...windows, { ...newWindow, sort: windows.length }];
+    updateWindowOrder(updatedWindows.length - 1, updatedWindows);
+  };
+
   const closeWindow = id => {
     const newWindows = [...windows];
     newWindows.splice(id, 1);
+    updateWindowOrder(newWindows.length - 1, newWindows);
+  };
+
+  const updateWindowOrder = (currentId, updatedWindows = null) => {
+    let newWindows = buildOrder(updatedWindows || windows);
+    console.log(newWindows, "newWindows");
+    newWindows = newWindows.map((window, idx) => {
+      if (idx === currentId) {
+        return { ...window, sort: newWindows.length - 1 };
+      }
+
+      return window.sort < newWindows[currentId].sort
+        ? window
+        : { ...window, sort: window.sort - 1 };
+    });
+
     setWindows(newWindows);
   };
 
   return (
     <div className="app-container">
       <MenuBar openWindow={openWindow} />
-      <Desktop windows={windows} closeWindow={closeWindow} />
+      <Desktop
+        windows={windows}
+        updateWindowOrder={updateWindowOrder}
+        closeWindow={closeWindow}
+      />
     </div>
   );
 };
