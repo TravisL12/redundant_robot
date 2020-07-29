@@ -37,7 +37,17 @@ const DesktopWindow = ({ window, select, isActive, close }) => {
           </div>
           {title}
         </div>
-        <div className="window-body"></div>
+        <div className="window-body">
+          {window.url && (
+            <iframe
+              title="APOD Video"
+              width="100%"
+              height="100%"
+              src={window.url}
+              frameBorder="0"
+            ></iframe>
+          )}{" "}
+        </div>
       </div>
     </Draggable>
   );

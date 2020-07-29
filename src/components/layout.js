@@ -16,7 +16,7 @@ setInterval(() => {
 }, 8000);
 
 const defaultWindows = [
-  { title: "Home" },
+  { title: "Home", url: "https://www.redundantrobot.com" },
   { title: "Pictures" },
   { title: "Movies" },
   { title: "Projects" },
