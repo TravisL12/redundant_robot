@@ -15,42 +15,42 @@ setInterval(() => {
 }, 8000);
 
 const defaultWindows = [
-  { title: "Home" },
-  { title: "Pictures" },
-  { title: "Projects" },
-  { title: "Demos" },
+  { title: "1 Home" },
+  { title: "2 Pictures" },
+  { title: "3 Projects" },
+  { title: "4 Demos" },
 ];
 
-function buildOrder(windows) {
+function orderWindows(windows) {
   return windows.map((window, idx) => ({
     ...window,
+    id: window.id || idx,
     sort: window.sort || idx,
   }));
 }
 
 const Layout = () => {
-  const [windows, setWindows] = useState(buildOrder(defaultWindows));
+  const [windows, setWindows] = useState(orderWindows(defaultWindows));
 
   const openWindow = newWindow => {
     const updatedWindows = [...windows, { ...newWindow, sort: windows.length }];
     updateWindowOrder(updatedWindows.length - 1, updatedWindows);
   };
 
-  const closeWindow = id => {
-    const newWindows = [...windows];
-    newWindows.splice(id, 1);
-    updateWindowOrder(newWindows.length - 1, newWindows);
+  const closeWindow = removeId => {
+    const newWindows = windows.filter(({ id }) => id !== removeId);
+    newWindows?.length === 0
+      ? setWindows([])
+      : updateWindowOrder(newWindows[newWindows.length - 1].id, newWindows);
   };
 
   const updateWindowOrder = (currentId, updatedWindows = null) => {
-    let newWindows = buildOrder(updatedWindows || windows);
-    console.log(newWindows, "newWindows");
-    newWindows = newWindows.map((window, idx) => {
-      if (idx === currentId) {
-        return { ...window, sort: newWindows.length - 1 };
-      }
+    let newWindows = orderWindows(updatedWindows || windows);
+    const currentIndex = newWindows.findIndex(({ id }) => id === currentId);
+    newWindows[currentIndex].sort = newWindows.length - 1;
 
-      return window.sort < newWindows[currentId].sort
+    newWindows = newWindows.map((window, idx) => {
+      return window.sort < newWindows[currentIndex].sort || currentIndex === idx
         ? window
         : { ...window, sort: window.sort - 1 };
     });

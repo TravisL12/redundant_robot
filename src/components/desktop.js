@@ -4,10 +4,9 @@ import DesktopWindow from "./desktopWindow";
 const Desktop = ({ windows, closeWindow, updateWindowOrder }) => {
   return (
     <div className="desktop">
-      {windows.map((window, idx) => (
+      {windows.map(window => (
         <DesktopWindow
-          key={idx}
-          id={idx}
+          key={`window-${window.id}`}
           window={window}
           isActive={window.sort === windows.length - 1}
           select={updateWindowOrder}
