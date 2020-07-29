@@ -26,7 +26,7 @@ const Layout = () => {
   const [windows, setWindows] = useState(orderWindows(defaultWindows));
 
   const openWindow = newWindow => {
-    const updatedWindows = [...windows, { ...newWindow, sort: windows.length }];
+    const updatedWindows = [...windows, newWindow];
     updateWindowOrder(updatedWindows.length - 1, updatedWindows);
   };
 
