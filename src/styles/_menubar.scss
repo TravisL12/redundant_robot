@@ -31,12 +31,15 @@
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        min-width: 100%;
 
         .menu-item {
           cursor: pointer;
           background: pink;
           width: 100%;
+          white-space: nowrap;
+          padding: 3px 8px;
+
           &:hover {
             background: rgb(255, 146, 164);
           }
