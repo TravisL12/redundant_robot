@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MenuBar = ({ openWindow }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleShow = () => setShowMenu(!showMenu);
+
   const menuItems = [
     { title: "File", items: ["File Item", "File Item 2"] },
     { title: "Edit", items: ["Edit Item", "Edit Item 2"] },
@@ -19,7 +22,10 @@ const MenuBar = ({ openWindow }) => {
 
   return (
     <div className="menu-bar">
-      <ul className="main-menu">
+      <ul
+        className={`main-menu ${showMenu ? "show" : ""}`}
+        onClick={toggleShow}
+      >
         {menuItems.map((menu, idx) => (
           <li key={idx} className="menu-item">
             <span className="menu-title">{menu.title}</span>

@@ -19,19 +19,19 @@
     display: flex;
     z-index: 2;
 
+    &.show > .menu-item:hover {
+      .menu-title {
+        background: #eee;
+      }
+
+      & > .sub-menu {
+        display: block;
+      }
+    }
+
     & > .menu-item {
       position: relative;
       z-index: 1;
-
-      &:hover {
-        .menu-title {
-          background: #eee;
-        }
-
-        & > .sub-menu {
-          display: block;
-        }
-      }
 
       & > .sub-menu {
         display: none;
