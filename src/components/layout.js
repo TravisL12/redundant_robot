@@ -6,6 +6,7 @@ import MenuBar from "./menu-bar";
 import Desktop from "./desktop";
 import "../styles/application.scss";
 import { orderWindows } from "../utils/windowUtils";
+import RobotCube from "./robot-head";
 
 // Slowly change background color of site
 const bgColors = ["#C0D8E0", "#C7CCE5", "#FFF4D9", "#FFEDD9"];
@@ -16,10 +17,19 @@ setInterval(() => {
 }, 8000);
 
 const defaultWindows = [
-  { title: "Home", url: "https://www.redundantrobot.com" },
-  { title: "Pictures" },
-  { title: "Movies" },
   { title: "Projects" },
+  { title: "iFrame", options: { url: "https://www.redundantrobot.com" } },
+  {
+    title: "HTML Example",
+    options: {
+      html: (
+        <div style={{ width: "100%", height: "100%", background: bgColors[1] }}>
+          <h1 style={{ margin: 0 }}>Look at me! I'm HTML markup</h1>
+        </div>
+      ),
+    },
+  },
+  { title: "Component", options: { component: RobotCube } },
 ];
 
 const Layout = () => {

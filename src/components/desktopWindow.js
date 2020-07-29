@@ -3,9 +3,34 @@ import Draggable from "react-draggable";
 
 const DEFAULT_POSITION = 50;
 
+function buildBody(options = {}) {
+  if (options.url) {
+    return (
+      <iframe
+        title="APOD Video"
+        width="100%"
+        height="100%"
+        src={options.url}
+        frameBorder="0"
+      ></iframe>
+    );
+  }
+
+  if (options.html) {
+    return options.html;
+  }
+
+  if (options.component) {
+    const Component = options.component;
+    return <Component />;
+  }
+}
+
 const DesktopWindow = ({ window, select, isActive, close }) => {
   const { id, sort, title } = window;
   const defaultPosition = DEFAULT_POSITION * (id + 1);
+
+  const windowBody = buildBody(window.options);
 
   return (
     <Draggable
@@ -37,17 +62,7 @@ const DesktopWindow = ({ window, select, isActive, close }) => {
           </div>
           {title}
         </div>
-        <div className="window-body">
-          {window.url && (
-            <iframe
-              title="APOD Video"
-              width="100%"
-              height="100%"
-              src={window.url}
-              frameBorder="0"
-            ></iframe>
-          )}{" "}
-        </div>
+        <div className="window-body">{windowBody}</div>
       </div>
     </Draggable>
   );
