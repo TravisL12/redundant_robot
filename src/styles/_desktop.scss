@@ -2,7 +2,7 @@
   position: relative;
   z-index: 0;
   flex: 1;
-  background: lightgreen;
+  background: $color-1;
   border-bottom-left-radius: $desktop-border-radius;
   border-bottom-right-radius: $desktop-border-radius;
 
@@ -21,7 +21,8 @@
   resize: both;
   overflow: scroll;
   background: #eee;
-  box-shadow: -2px 2px 20px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 2px 20px 5px $transparent-black;
+  border-radius: $desktop-border-radius;
 
   &.active .window-title-bar {
     background: #aaa;

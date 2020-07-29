@@ -6,20 +6,27 @@
   border-top-right-radius: $desktop-border-radius;
 
   .menu-item {
-    padding: 3px;
     box-sizing: border-box;
   }
 
+  .menu-title {
+    display: block;
+    position: relative;
+    padding: 3px 12px;
+  }
+
   & > .main-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 100px));
+    display: flex;
+    z-index: 2;
 
     & > .menu-item {
       position: relative;
       z-index: 1;
 
       &:hover {
-        background: #eee;
+        .menu-title {
+          background: #eee;
+        }
 
         & > .sub-menu {
           display: block;
@@ -32,16 +39,22 @@
         top: 100%;
         left: 0;
         min-width: 100%;
+        box-shadow: -2px 2px 12px 0px $transparent-black;
 
         .menu-item {
           cursor: pointer;
-          background: pink;
+          background: rgba(235, 239, 241, 0.95);
           width: 100%;
           white-space: nowrap;
-          padding: 3px 8px;
+          padding: 3px 20px;
 
           &:hover {
-            background: rgb(255, 146, 164);
+            background: $color-5;
+          }
+
+          &:last-child {
+            border-bottom-left-radius: $desktop-border-radius;
+            border-bottom-right-radius: $desktop-border-radius;
           }
         }
       }

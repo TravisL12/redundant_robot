@@ -22,7 +22,7 @@ const MenuBar = ({ openWindow }) => {
       <ul className="main-menu">
         {menuItems.map((menu, idx) => (
           <li key={idx} className="menu-item">
-            <span>{menu.title}</span>
+            <span className="menu-title">{menu.title}</span>
             <ul className="sub-menu">
               {menu.items.map((item, jdx) => (
                 <li
