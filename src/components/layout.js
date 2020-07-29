@@ -15,10 +15,10 @@ setInterval(() => {
 }, 8000);
 
 const defaultWindows = [
-  { title: "1 Home" },
-  { title: "2 Pictures" },
-  { title: "3 Projects" },
-  { title: "4 Demos" },
+  { title: "Home" },
+  { title: "Pictures" },
+  { title: "Movies" },
+  { title: "Projects" },
 ];
 
 function findWindowId(windows, nextId) {
@@ -34,7 +34,7 @@ function findWindowId(windows, nextId) {
   return ids[ids.length - 1] + 1;
 }
 
-function orderWindows(windows) {
+function orderWindows(windows = []) {
   return windows.reduce((acc, window, idx) => {
     const newId = window.hasOwnProperty("id")
       ? window.id
