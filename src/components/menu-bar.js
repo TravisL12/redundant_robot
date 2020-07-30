@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import { welcome, projects, iFrame, htmlExample } from "./windowContents";
+import { welcome, bouncingBalls } from "./windowContents";
+
+const menuItems = [
+  {
+    title: "File",
+    items: [bouncingBalls],
+  },
+  {
+    title: "Edit",
+    items: [welcome],
+  },
+  {
+    title: "View",
+    items: [welcome, bouncingBalls],
+  },
+  { title: "Window", items: [welcome, bouncingBalls] },
+  { title: "Special", items: [welcome, bouncingBalls] },
+];
 
 const MenuBar = ({ openWindow }) => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleShow = () => setShowMenu(!showMenu);
-
-  const menuItems = [
-    {
-      title: "File",
-      items: [htmlExample, iFrame],
-    },
-    {
-      title: "Edit",
-      items: [htmlExample, welcome],
-    },
-    {
-      title: "View",
-      items: [welcome, iFrame, projects],
-    },
-    { title: "Window", items: [welcome, iFrame, projects] },
-    { title: "Special", items: [welcome, iFrame, projects] },
-  ];
 
   return (
     <div className="menu-bar">
