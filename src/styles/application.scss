@@ -38,10 +38,11 @@ a {
 @import "build_robot_mixin";
 @import "spinning_robot_cube";
 @import "grid";
-@import "menubar";
-@import "desktop";
 @import "sheepshaver";
 @import "resume";
+@import "menubar";
+@import "desktop";
+@import "window_components";
 
 body {
   margin: 0;

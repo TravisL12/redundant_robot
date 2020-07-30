@@ -11,10 +11,10 @@ function buildBody({ url, html, component } = {}) {
         width="100%"
         height="100%"
         src={url}
-        frameborder="no"
+        frameBorder="no"
         loading="lazy"
         allowtransparency="true"
-        allowfullscreen="true"
+        allowFullScreen="true"
       ></iframe>
     );
   }

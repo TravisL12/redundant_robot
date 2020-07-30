@@ -1,23 +1,25 @@
 import React, { useState } from "react";
+import { welcome, projects, iFrame, htmlExample } from "./windowContents";
 
 const MenuBar = ({ openWindow }) => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleShow = () => setShowMenu(!showMenu);
 
   const menuItems = [
-    { title: "File", items: ["File Item", "File Item 2"] },
-    { title: "Edit", items: ["Edit Item", "Edit Item 2"] },
+    {
+      title: "File",
+      items: [htmlExample, iFrame],
+    },
+    {
+      title: "Edit",
+      items: [htmlExample, welcome],
+    },
     {
       title: "View",
-      items: [
-        "View Item",
-        "View Item 2 that is really long",
-        "View Item 3",
-        "View Item 4",
-      ],
+      items: [welcome, iFrame, projects],
     },
-    { title: "Window", items: ["Window Item", "Window Item 2"] },
-    { title: "Special", items: ["Special Item", "Special Item 2"] },
+    { title: "Window", items: [welcome, iFrame, projects] },
+    { title: "Special", items: [welcome, iFrame, projects] },
   ];
 
   return (
@@ -30,15 +32,17 @@ const MenuBar = ({ openWindow }) => {
           <li key={idx} className="menu-item">
             <span className="menu-title">{menu.title}</span>
             <ul className="sub-menu">
-              {menu.items.map((item, jdx) => (
-                <li
-                  key={jdx}
-                  className="menu-item"
-                  onClick={() => openWindow({ title: `${item} blah` })}
-                >
-                  {item}
-                </li>
-              ))}
+              {menu.items.map((item, jdx) => {
+                return (
+                  <li
+                    key={jdx}
+                    className="menu-item"
+                    onClick={() => openWindow(item)}
+                  >
+                    {item.title}
+                  </li>
+                );
+              })}
             </ul>
           </li>
         ))}

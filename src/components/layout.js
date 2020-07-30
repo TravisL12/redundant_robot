@@ -6,8 +6,7 @@ import MenuBar from "./menu-bar";
 import Desktop from "./desktop";
 import "../styles/application.scss";
 import { orderWindows } from "../utils/windowUtils";
-import RobotCube from "./robot-head";
-import { getCodePens } from "../utils/codepens";
+import { welcome } from "./windowContents/";
 
 // Slowly change background color of site
 const bgColors = ["#C0D8E0", "#C7CCE5", "#FFF4D9", "#FFEDD9"];
@@ -17,30 +16,8 @@ setInterval(() => {
   colorIdx++;
 }, 8000);
 
-const defaultWindows = [
-  { title: "Projects" },
-  {
-    title: "iFrame",
-    options: {
-      url: getCodePens()[2].url,
-      size: { width: "800px", height: "600px" },
-    },
-  },
-  {
-    title: "HTML Example",
-    options: {
-      html: (
-        <div style={{ width: "100%", height: "100%", background: bgColors[1] }}>
-          <h1 style={{ margin: 0 }}>Look at me! I'm HTML markup</h1>
-        </div>
-      ),
-    },
-  },
-  { title: "Component", options: { component: RobotCube } },
-];
-
 const Layout = () => {
-  const [windows, setWindows] = useState(orderWindows(defaultWindows));
+  const [windows, setWindows] = useState(orderWindows([welcome]));
 
   const openWindow = newWindow => {
     const updatedWindows = [...windows, newWindow];
