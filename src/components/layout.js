@@ -7,6 +7,7 @@ import Desktop from "./desktop";
 import "../styles/application.scss";
 import { orderWindows } from "../utils/windowUtils";
 import RobotCube from "./robot-head";
+import { getCodePens } from "../utils/codepens";
 
 // Slowly change background color of site
 const bgColors = ["#C0D8E0", "#C7CCE5", "#FFF4D9", "#FFEDD9"];
@@ -18,7 +19,13 @@ setInterval(() => {
 
 const defaultWindows = [
   { title: "Projects" },
-  { title: "iFrame", options: { url: "https://www.redundantrobot.com" } },
+  {
+    title: "iFrame",
+    options: {
+      url: getCodePens()[2].url,
+      size: { width: "800px", height: "600px" },
+    },
+  },
   {
     title: "HTML Example",
     options: {

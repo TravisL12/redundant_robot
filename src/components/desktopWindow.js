@@ -3,34 +3,41 @@ import Draggable from "react-draggable";
 
 const DEFAULT_POSITION = 50;
 
-function buildBody(options = {}) {
-  if (options.url) {
+function buildBody({ url, html, component } = {}) {
+  if (url) {
     return (
       <iframe
         title="APOD Video"
         width="100%"
         height="100%"
-        src={options.url}
-        frameBorder="0"
+        src={url}
+        frameborder="no"
+        loading="lazy"
+        allowtransparency="true"
+        allowfullscreen="true"
       ></iframe>
     );
   }
 
-  if (options.html) {
-    return options.html;
+  if (html) {
+    return html;
   }
 
-  if (options.component) {
-    const Component = options.component;
+  if (component) {
+    const Component = component;
     return <Component />;
   }
 }
 
 const DesktopWindow = ({ window, select, isActive, close }) => {
-  const { id, sort, title } = window;
+  const { id, sort, title, options } = window;
   const defaultPosition = DEFAULT_POSITION * (id + 1);
 
-  const windowBody = buildBody(window.options);
+  const windowBody = buildBody(options);
+  let style = { zIndex: sort };
+  if (options?.size) {
+    style = { ...style, ...options.size };
+  }
 
   return (
     <Draggable
@@ -46,7 +53,7 @@ const DesktopWindow = ({ window, select, isActive, close }) => {
         onClick={() => select(id)}
         role="heading"
         aria-hidden="true"
-        style={{ zIndex: sort }}
+        style={style}
       >
         <div className="window-title-bar">
           <div className="window-buttons">
