@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { welcome, bouncingBalls } from "./windowContents";
+import { getCodePenWindows } from "../utils/codepens";
 
 const menuItems = [
   {
@@ -16,6 +17,7 @@ const menuItems = [
   },
   { title: "Window", items: [welcome, bouncingBalls] },
   { title: "Special", items: [welcome, bouncingBalls] },
+  { title: "Code Pens", items: getCodePenWindows() },
 ];
 
 const MenuBar = ({ openWindow }) => {
