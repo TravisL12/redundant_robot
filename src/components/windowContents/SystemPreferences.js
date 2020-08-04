@@ -11,23 +11,26 @@ const ColorListItem = styled.li`
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 5px;
+  &:hover {
+    color: white;
+  }
   span {
     display: inline-block;
-    height: 15px;
-    width: 15px;
-    border: 1px solid;
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
     background: ${({ color }) => color};
   }
 `;
 
-const ListItem = ({ color, setColor }) => {
-  return (
-    <ColorListItem color={color} onClick={() => setColor(color)}>
-      <span></span>
-      {color}
-    </ColorListItem>
-  );
-};
+const ListItem = ({ color, setColor }) => (
+  <ColorListItem color={color} onClick={() => setColor(color)}>
+    <span></span>
+    {color}
+  </ColorListItem>
+);
 
 const SystemPreferences = () => {
   const [color, setColor] = useState();
