@@ -1,5 +1,6 @@
 import { getCodePens } from "../../utils/codepens";
-import Welcome from "./welcome";
+import Welcome from "./Welcome";
+import SystemPreferences from "./SystemPreferences";
 
 export const IFRAME_TYPE = "iframe";
 export const COMPONENT_TYPE = "component";
@@ -19,4 +20,10 @@ const bouncingBalls = {
   },
 };
 
-export { welcome, bouncingBalls };
+const systemPreferences = {
+  title: "System Preferences",
+  type: COMPONENT_TYPE,
+  content: { component: SystemPreferences },
+};
+
+export { welcome, bouncingBalls, systemPreferences };

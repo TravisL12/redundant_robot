@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { welcome, bouncingBalls } from "./windowContents";
+import { welcome, bouncingBalls, systemPreferences } from "./windowContents";
 import { getCodePenWindows } from "../utils/codepens";
 
 const menuItems = [
@@ -16,7 +16,7 @@ const menuItems = [
     items: [welcome, bouncingBalls],
   },
   { title: "Window", items: [welcome, bouncingBalls] },
-  { title: "Special", items: [welcome, bouncingBalls] },
+  { title: "Special", items: [welcome, systemPreferences] },
   { title: "Code Pens", items: getCodePenWindows() },
 ];
 
