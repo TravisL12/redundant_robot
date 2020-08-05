@@ -1,15 +1,6 @@
-.desktop {
-  position: relative;
-  z-index: 0;
-  flex: 1;
-  background: $color-1;
-  border-bottom-left-radius: $desktop-border-radius;
-  border-bottom-right-radius: $desktop-border-radius;
-
-  .background-robot {
-    opacity: 0.3;
-    @include build-robot(300px, $color-1);
-  }
+.background-robot {
+  opacity: 0.3;
+  @include build-robot(300px, $color-1);
 }
 
 .window {

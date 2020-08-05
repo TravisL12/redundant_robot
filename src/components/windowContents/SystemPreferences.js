@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useMyTheme } from "../layout";
 
 const PreferencesWrapper = styled.div`
-  background-color: ${props => props.background || "white"};
   height: 100%;
   width: 100%;
 `;
@@ -13,7 +13,7 @@ const ColorListItem = styled.li`
   align-items: center;
   padding: 5px;
   &:hover {
-    color: white;
+    color: #aaa;
   }
   span {
     display: inline-block;
@@ -25,22 +25,23 @@ const ColorListItem = styled.li`
   }
 `;
 
-const ListItem = ({ color, setColor }) => (
-  <ColorListItem color={color} onClick={() => setColor(color)}>
-    <span></span>
-    {color}
-  </ColorListItem>
-);
+const ListItem = ({ color }) => {
+  const { updateTheme } = useMyTheme();
+  return (
+    <ColorListItem color={color} onClick={() => updateTheme({ color })}>
+      <span></span>
+      {color}
+    </ColorListItem>
+  );
+};
 
 const SystemPreferences = () => {
-  const [color, setColor] = useState();
-
   return (
-    <PreferencesWrapper background={color}>
+    <PreferencesWrapper>
       <ul>
-        <ListItem color={"Red"} setColor={setColor} />
-        <ListItem color={"Lightgreen"} setColor={setColor} />
-        <ListItem color={"Lightblue"} setColor={setColor} />
+        <ListItem color={"red"} />
+        <ListItem color={"lightgreen"} />
+        <ListItem color={"lightblue"} />
       </ul>
     </PreferencesWrapper>
   );

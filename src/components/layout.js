@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+import { MyThemeProvider } from "./MyThemeProvider";
 import MenuBar from "./menu-bar";
 import Desktop from "./desktop";
 import "../styles/application.scss";
@@ -37,14 +38,16 @@ const Layout = () => {
   };
 
   return (
-    <div className="app-container">
-      <MenuBar openWindow={openWindow} />
-      <Desktop
-        windows={windows}
-        updateWindowOrder={updateWindowOrder}
-        closeWindow={closeWindow}
-      />
-    </div>
+    <MyThemeProvider>
+      <div className="app-container">
+        <MenuBar openWindow={openWindow} />
+        <Desktop
+          windows={windows}
+          updateWindowOrder={updateWindowOrder}
+          closeWindow={closeWindow}
+        />
+      </div>
+    </MyThemeProvider>
   );
 };
 
