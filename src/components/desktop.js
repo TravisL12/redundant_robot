@@ -8,6 +8,7 @@ const DesktopWrapper = styled.div`
   z-index: 0;
   flex: 1;
   background: ${({ theme }) => theme.color};
+  transition: 1.5s linear background;
   border-bottom-left-radius: $desktop-border-radius;
   border-bottom-right-radius: $desktop-border-radius;
 `;

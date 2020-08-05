@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 const ThemeToggleContext = createContext();
 
 export const MyThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState({ color: "pink" });
+  const [theme, setTheme] = useState({ color: "magenta" });
 
   const updateTheme = val => {
     setTheme(val);
