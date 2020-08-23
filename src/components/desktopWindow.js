@@ -66,7 +66,7 @@ const DesktopWindow = ({ window, select, isActive, close }) => {
               &#x2715;
             </button>
           </div>
-          {title}
+          <span className="title">{title}</span>
         </div>
         <div className="window-body">{windowBody}</div>
       </div>

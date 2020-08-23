@@ -11,6 +11,13 @@ const WelcomeWrapper = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
+  background: rgb(209, 153, 254);
+  background: linear-gradient(
+    336deg,
+    rgba(209, 153, 254, 1) 0%,
+    rgba(76, 201, 255, 1) 44%,
+    rgba(206, 247, 255, 1) 100%
+  );
   ${buildRobot(200)}
 `;
 

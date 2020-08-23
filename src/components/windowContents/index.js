@@ -9,7 +9,7 @@ export const COMPONENT_TYPE = "component";
 const welcome = {
   title: "Welcome to Redundant Robot",
   type: COMPONENT_TYPE,
-  content: { component: Welcome },
+  content: { component: Welcome, size: { width: "640px", height: "400px" } },
 };
 
 const apod = {
