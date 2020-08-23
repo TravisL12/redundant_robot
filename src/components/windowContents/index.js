@@ -1,6 +1,7 @@
 import { getCodePens } from "../../utils/codepens";
 import Welcome from "./Welcome";
 import SystemPreferences from "./SystemPreferences";
+import Apod from "./Apod";
 
 export const IFRAME_TYPE = "iframe";
 export const COMPONENT_TYPE = "component";
@@ -9,6 +10,12 @@ const welcome = {
   title: "Welcome to Redundant Robot",
   type: COMPONENT_TYPE,
   content: { component: Welcome },
+};
+
+const apod = {
+  title: "Astronomy Picture of the Day",
+  type: COMPONENT_TYPE,
+  content: { component: Apod, size: { width: "800px", height: "600px" } },
 };
 
 const bouncingBalls = {
@@ -26,4 +33,4 @@ const systemPreferences = {
   content: { component: SystemPreferences },
 };
 
-export { welcome, bouncingBalls, systemPreferences };
+export { welcome, apod, bouncingBalls, systemPreferences };

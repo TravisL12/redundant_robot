@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { welcome, bouncingBalls, systemPreferences } from "./windowContents";
+
+import {
+  welcome,
+  bouncingBalls,
+  systemPreferences,
+  apod,
+} from "./windowContents";
 import { getCodePenWindows } from "../utils/codepens";
 
 const menuItems = [
@@ -9,7 +15,7 @@ const menuItems = [
   },
   {
     title: "Edit",
-    items: [welcome],
+    items: [welcome, apod],
   },
   {
     title: "View",
