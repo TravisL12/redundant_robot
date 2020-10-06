@@ -71,6 +71,45 @@ const IndexPage = () => (
           </p>
         </div>
       </div>
+
+      <div className="demo-stuff">
+        <div className="link">
+          <img src={ApodImg} alt="ApodImg" />
+        </div>
+        <h4>Compare Colors</h4>
+        <div className="description">
+          <p>
+            A tool I built to paste in a large collection of text that contains
+            colors (browser colors, hex, or rgb) and then display any colors
+            found in that text. The colors will be split into their hex, rgb,
+            and hsl formats that can be copied on click. Also a sorting feature
+            is available to sort the colors using two color sorting algorithms.
+            The values will be sorted based on a compared colored entered in.
+          </p>
+          <p>
+            Get it for:{" "}
+            <a href="https://travisl12.github.io/compare_colors/">
+              Compare Colors
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div className="demo-stuff">
+        <div className="link">
+          <img src={ApodImg} alt="ApodImg" />
+        </div>
+        <h4>Super Mega Baseball 3 Rosters</h4>
+        <div className="description">
+          <p>This is the data for the game Super Mega Baseball 3.</p>
+          <p>
+            Get it for:{" "}
+            <a href="https://travisl12.github.io/super_mega_baseball_charts/">
+              Super Mega Baseball Rosters
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   </Layout>
 );
