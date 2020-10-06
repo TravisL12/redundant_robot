@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-import { AppContainer } from './styles/styles';
+import { AppContainer } from '../../styles/styles';
 
 function App() {
   return (
