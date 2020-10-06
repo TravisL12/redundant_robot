@@ -11,13 +11,6 @@ const headerHeight = '10rem';
 const fontColor = black;
 
 export const AppContainer = styled.div`
-  * {
-    box-sizing: border-box;
-  }
-  html {
-    font-size: 10px;
-  }
-
   a {
     color: ${fontColor};
     text-decoration: none;

@@ -2,14 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
+import RobotHead from './components/RobotHead';
+import Header from './components/Header';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { AppContainer } from './styles/styles';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <AppContainer>
+      <Router>
+        <div className="background-robot">
+          <RobotHead />
+        </div>
+        <Header />
+        <App />
+      </Router>
+    </AppContainer>
   </React.StrictMode>,
   document.getElementById('root')
 );
