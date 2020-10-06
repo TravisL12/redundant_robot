@@ -31,35 +31,33 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div className="header">
-        <div className="header-container">
-          <div>
-            <RobotCube />
-            <div className="home-title">
-              <Link to="/">
-                <h1>REDUNDANT</h1>
-                <h1 className="header-accent-color">ROBOT</h1>
-              </Link>
-            </div>
+      <div className="header-container">
+        <div>
+          <RobotCube />
+          <div className="home-title">
+            <Link to="/">
+              <h1>REDUNDANT</h1>
+              <h1 className="header-accent-color">ROBOT</h1>
+            </Link>
           </div>
-          <ul className="social-icons">
-            {socialLinks.map(({ url, icon, name }, idx) => (
-              <li key={idx}>
-                <a href={url} target="_blank" rel="noreferrer">
-                  <img src={icon} alt={name} />
-                </a>
-                <span>{name}</span>
-              </li>
-            ))}
-
-            <li>
-              <Link to="/resume">
-                <img src={ResumeIcon} alt="ResumeIcon" />
-              </Link>
-              <span>Resume</span>
-            </li>
-          </ul>
         </div>
+        <ul className="social-icons">
+          {socialLinks.map(({ url, icon, name }, idx) => (
+            <li key={idx}>
+              <a href={url} target="_blank" rel="noreferrer">
+                <img src={icon} alt={name} />
+              </a>
+              <span>{name}</span>
+            </li>
+          ))}
+
+          <li>
+            <Link to="/resume">
+              <img src={ResumeIcon} alt="ResumeIcon" />
+            </Link>
+            <span>Resume</span>
+          </li>
+        </ul>
       </div>
     </HeaderContainer>
   );

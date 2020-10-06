@@ -1,16 +1,14 @@
 import styled from 'styled-components';
+import { buildRobot } from './robotMixin';
 
-const black = '#4a4a4a';
-const color1 = '#56a3a6'; // cadet blue
-const color2 = '#778e6f'; // camoflage green
-const color3 = '#a6eab1'; // light green/yellow
-const color4 = '#d4eac8'; // tea green
-const color5 = '#c0d8e0'; // light blue/purple
-const color6 = '#d80b0b'; // red title
-const headerHeight = '10rem';
-const fontColor = black;
+import { color1, color5, headerHeight, fontColor } from './variables';
 
 export const AppContainer = styled.div`
+  background: ${color5};
+  font-weight: 400;
+  color: ${fontColor};
+  transition: 3s linear background-color;
+
   a {
     color: ${fontColor};
     text-decoration: none;
@@ -23,40 +21,10 @@ export const AppContainer = styled.div`
     }
   }
 
-  @mixin catamaran-font($weight: 900) {
-    font-family: 'Catamaran', 'Helvetica neue', sans-serif;
-    font-weight: $weight;
-  }
-
-  @import 'build_robot_mixin';
-  @import 'spinning_robot_cube';
-  @import 'grid';
-  @import 'header';
-  @import 'sheepshaver';
-  @import 'resume';
-
-  body {
-    margin: 0;
-    background: ${color5};
-    @include catamaran-font(400);
-    color: ${fontColor};
-    transition: 3s linear background-color;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      text-decoration: none;
-    }
-  }
-
   .logo {
     text-align: center;
     h1 {
       display: inline-block;
-      @include catamaran-font;
       font-size: 11rem;
       line-height: 13.5rem;
       margin: 0;
@@ -72,7 +40,7 @@ export const AppContainer = styled.div`
     width: 100%;
     z-index: -1;
     opacity: 0.3;
-    @include build-robot(250px, ${color1});
+    ${buildRobot(250)}
   }
 
   .container {
