@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { buildRobot } from './robotMixin';
 
-import { color1, color5, headerHeight, fontColor } from './variables';
+import { color1, headerHeight, fontColor } from './variables';
 
 export const AppContainer = styled.div`
   position: relative;

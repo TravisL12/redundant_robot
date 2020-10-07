@@ -44,7 +44,7 @@ const Header = () => {
         <ul className="social-icons">
           {socialLinks.map(({ url, icon, name }, idx) => (
             <li key={idx}>
-              <a href={url} target="_blank" rel="noreferrer">
+              <a href={url} target="_blank" rel="noopener noreferrer">
                 <img src={icon} alt={name} />
               </a>
               <span>{name}</span>
