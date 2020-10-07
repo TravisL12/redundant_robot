@@ -1,3 +1,4 @@
+import { getPx } from '../components/utilities';
 import { transparentBlack, desktopBorderRadius, color5 } from './variables';
 
 export const DesktopContainer = styled.div`
@@ -49,7 +50,7 @@ export const DesktopContainer = styled.div`
     overflow: scroll;
     background: #eee;
     box-shadow: -2px 2px 20px 5px ${transparentBlack};
-    border-radius: ${desktopBorderRadius};
+    border-radius: ${getPx(desktopBorderRadius)};
 
     &.active .window-title-bar {
       background: #aaa;
@@ -90,8 +91,8 @@ export const DesktopContainer = styled.div`
     font-size: 1.4rem;
     background: white;
     padding: 0 10px;
-    border-top-left-radius: ${desktopBorderRadius};
-    border-top-right-radius: ${desktopBorderRadius};
+    border-top-left-radius: ${getPx(desktopBorderRadius)};
+    border-top-right-radius: ${getPx(desktopBorderRadius)};
 
     .menu-item {
       box-sizing: border-box;
@@ -141,8 +142,8 @@ export const DesktopContainer = styled.div`
             }
 
             &:last-child {
-              border-bottom-left-radius: ${desktopBorderRadius};
-              border-bottom-right-radius: ${desktopBorderRadius};
+              border-bottom-left-radius: ${getPx(desktopBorderRadius)};
+              border-bottom-right-radius: ${getPx(desktopBorderRadius)};
             }
           }
         }

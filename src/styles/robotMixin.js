@@ -1,4 +1,4 @@
-import { getPx, getPct } from './variables';
+import { getPx, getPct } from '../components/utilities';
 
 export function buildRobot(headHeight = 60, robotColor = 'lightblue') {
   const headMargin = headHeight * 0.4;

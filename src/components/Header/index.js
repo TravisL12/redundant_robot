@@ -2,12 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderContainer } from '../../styles/header';
 import { RobotCube } from '../RobotHead';
+import { getAsset } from '../utilities';
 
-const GithubSocialMediaLogo = `${process.env.PUBLIC_URL}/assets/social/iconfinder_github_317712.svg`;
-const OnlineSocialMediaTwitter = `${process.env.PUBLIC_URL}/assets/social/iconfinder_twitter_317720.svg`;
-const OnlineSocialMediaLinkedIn = `${process.env.PUBLIC_URL}/assets/social/iconfinder_square-linkedin_317725.svg`;
-const CodePenIcon = `${process.env.PUBLIC_URL}/assets/social/codepen_logo.svg`;
-const ResumeIcon = `${process.env.PUBLIC_URL}/assets/social/resume_logo.svg`;
+const GithubSocialMediaLogo = getAsset(
+  '/assets/social/iconfinder_github_317712.svg'
+);
+const OnlineSocialMediaTwitter = getAsset(
+  '/assets/social/iconfinder_twitter_317720.svg'
+);
+const OnlineSocialMediaLinkedIn = getAsset(
+  '/assets/social/iconfinder_square-linkedin_317725.svg'
+);
+const CodePenIcon = getAsset('/assets/social/codepen_logo.svg');
+const ResumeIcon = getAsset('/assets/social/resume_logo.svg');
 
 const Header = () => {
   const socialLinks = [

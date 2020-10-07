@@ -1,7 +1,10 @@
 import React from 'react';
+import { getAsset } from '../utilities';
 
-const WelcomeToMac = `${process.env.PUBLIC_URL}/assets/sheepshaver/welcome-to-mac.jpg`;
-const BasiliskPreference = `${process.env.PUBLIC_URL}/assets/sheepshaver/basiliskPreference.jpg`;
+const WelcomeToMac = getAsset('/assets/sheepshaver/welcome-to-mac.jpg');
+const BasiliskPreference = getAsset(
+  '/assets/sheepshaver/basiliskPreference.jpg'
+);
 
 const SheepShaver = () => (
   <div className="sheepshaver">

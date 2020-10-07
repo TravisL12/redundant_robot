@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getAsset } from '../components/utilities';
 
 const mainDocMargin = '30px';
 const headingColor = '#444';
@@ -100,22 +101,19 @@ export const ResumeContainer = styled.div`
   }
 
   .github-icon {
-    background: url('${process.env
-        .PUBLIC_URL}/assets/resume/GitHub-Mark-32px.png')
+    background: url('${getAsset('/assets/resume/GitHub-Mark-32px.png')}')
       no-repeat center center;
     background-size: contain;
   }
 
   .codepen-icon {
-    background: url('${process.env
-        .PUBLIC_URL}/assets/resume/Button-Black-Large.png')
+    background: url('${getAsset('/assets/resume/Button-Black-Large.png')}')
       no-repeat center center;
     background-size: contain;
   }
 
   .web-icon {
-    background: url('${process.env
-        .PUBLIC_URL}/assets/resume/world-wide-web.png')
+    background: url('${getAsset('/assets/resume/world-wide-web.png')}')
       no-repeat center center;
     background-size: contain;
   }

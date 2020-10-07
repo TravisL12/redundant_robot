@@ -1,12 +1,11 @@
 import React from 'react';
 import { ResumeContainer } from '../../styles/resume';
+import { getAsset } from '../utilities';
 import { jobs, education } from './info';
 
 const Resume = () => (
   <>
-    <a
-      href={`${process.env.PUBLIC_URL}/assets/resume/travis_lawrence_resume.pdf`}
-    >
+    <a href={getAsset('/assets/resume/travis_lawrence_resume.pdf')}>
       PDF Version
     </a>
     <ResumeContainer>

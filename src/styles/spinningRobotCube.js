@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getPx, getPct } from '../components/utilities';
 import { buildRobot } from './robotMixin';
 import { color3, color4, color5 } from './variables';
 
@@ -79,7 +80,7 @@ export const SpinningRobotCube = styled.div`
 
     .cube {
       position: relative;
-      width: ${cubeSize}px;
+      width: ${getPx(cubeSize)};
       margin: 0 auto;
       transform-style: preserve-3d;
 
@@ -89,8 +90,8 @@ export const SpinningRobotCube = styled.div`
 
       .side {
         position: absolute;
-        width: ${cubeSize}px;
-        height: ${cubeSize}px;
+        width: ${getPx(cubeSize)};
+        height: ${getPx(cubeSize)};
         background: gray;
         box-sizing: border-box;
         border: 4px solid white;
@@ -109,12 +110,12 @@ export const SpinningRobotCube = styled.div`
   }
 
   .side.front {
-    transform: translateZ(${cubeTransform}px);
+    transform: translateZ(${getPx(cubeTransform)});
     ${buildRobot(robotSize, color5)};
   }
 
   .side.left {
-    transform: rotateY(270deg) translateX(-${cubeTransform}px);
+    transform: rotateY(270deg) translateX(-${getPx(cubeTransform)});
     transform-origin: center left;
     ${buildRobot(robotSize, color3)};
     .robot-head {
@@ -126,7 +127,7 @@ export const SpinningRobotCube = styled.div`
   }
 
   .side.back {
-    transform: translateZ(-${cubeTransform}px) rotateY(180deg);
+    transform: translateZ(-${getPx(cubeTransform)}) rotateY(180deg);
     ${buildRobot(robotSize, color4)};
     .robot-head {
       .mouth:after {
@@ -136,7 +137,7 @@ export const SpinningRobotCube = styled.div`
   }
 
   .side.right {
-    transform: rotateY(-270deg) translateX(${cubeTransform}px);
+    transform: rotateY(-270deg) translateX(${getPx(cubeTransform)});
     transform-origin: top right;
     ${buildRobot(robotSize, color5)};
     .robot-head {

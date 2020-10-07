@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getAsset } from '../utilities';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <div className="link">
           <Link to="/sheepshaver">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/sheepshaver_icon.png`}
+              src={`${getAsset('/assets/sheepshaver_icon.png')}`}
               alt="SheepshaverIcon"
             />
           </Link>
@@ -45,10 +46,7 @@ function App() {
 
       <div className="demo-stuff">
         <div className="link">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/apod.png`}
-            alt="ApodImg"
-          />
+          <img src={`${getAsset('/assets/apod.png')}`} alt="ApodImg" />
         </div>
 
         <h4>Astronomy Picture of the Day Extension</h4>
@@ -75,10 +73,7 @@ function App() {
 
       <div className="demo-stuff">
         <div className="link">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/apod.png`}
-            alt="ApodImg"
-          />
+          <img src={`${getAsset('/assets/apod.png')}`} alt="ApodImg" />
         </div>
         <h4>Compare Colors</h4>
         <div className="description">
@@ -101,10 +96,7 @@ function App() {
 
       <div className="demo-stuff">
         <div className="link">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/apod.png`}
-            alt="ApodImg"
-          />
+          <img src={`${getAsset('/assets/apod.png')}`} alt="ApodImg" />
         </div>
         <h4>Super Mega Baseball 3 Rosters</h4>
         <div className="description">
