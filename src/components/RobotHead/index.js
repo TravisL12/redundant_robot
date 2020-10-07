@@ -1,4 +1,5 @@
 import React from 'react';
+import { SpinningRobotCube } from '../../styles/spinningRobotCube';
 
 const RobotHead = () => (
   <div className="robot-head">
@@ -11,22 +12,24 @@ const RobotHead = () => (
 );
 
 export const RobotCube = () => (
-  <div className="cube-container">
-    <div className="cube">
-      <div className="side" id="front">
-        <RobotHead />
-      </div>
-      <div className="side" id="back">
-        <RobotHead />
-      </div>
-      <div className="side" id="left">
-        <RobotHead />
-      </div>
-      <div className="side" id="right">
-        <RobotHead />
+  <SpinningRobotCube>
+    <div className="cube-container">
+      <div className="cube">
+        <div className="side front">
+          <RobotHead />
+        </div>
+        <div className="side back">
+          <RobotHead />
+        </div>
+        <div className="side left">
+          <RobotHead />
+        </div>
+        <div className="side right">
+          <RobotHead />
+        </div>
       </div>
     </div>
-  </div>
+  </SpinningRobotCube>
 );
 
 export default RobotHead;

@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   position: fixed;
   display: flex;
   top: 0;
-  height: ${headerHeight};
+  height: ${headerHeight}rem;
   width: 100%;
   z-index: 2000;
   font-weight: 400;
@@ -67,6 +67,7 @@ export const HeaderContainer = styled.div`
     .home-title {
       display: inline-block;
       margin-left: 2rem;
+      font-weight: 900;
       a {
         border: 0;
       }

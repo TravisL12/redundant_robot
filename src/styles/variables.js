@@ -5,8 +5,16 @@ export const color3 = '#a6eab1'; // light green/yellow
 export const color4 = '#d4eac8'; // tea green
 export const color5 = '#c0d8e0'; // light blue/purple
 export const color6 = '#d80b0b'; // red title
-export const headerHeight = '10rem';
+export const headerHeight = 10;
 export const fontColor = black;
 
 export const desktopBorderRadius = '6px';
 export const transparentBlack = 'rgba(0, 0, 0, 0.2)';
+
+export function getPx(value) {
+  return `${value}px`;
+}
+
+export function getPct(value) {
+  return `${value}%`;
+}

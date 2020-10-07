@@ -6,11 +6,20 @@ import RobotHead from './components/RobotHead';
 import Header from './components/Header';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AppContainer } from './styles/styles';
+import { Container } from './styles/styles';
+
+// Slowly change background color of site
+const bgColors = ['#C0D8E0', '#C7CCE5', '#FFF4D9', '#FFEDD9'];
+let colorIdx = bgColors.length;
+
+setInterval(() => {
+  document.body.style.backgroundColor = bgColors[colorIdx % bgColors.length];
+  colorIdx++;
+}, 8000);
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContainer>
+    <Container>
       <Router>
         <div className="background-robot">
           <RobotHead />
@@ -18,7 +27,7 @@ ReactDOM.render(
         <Header />
         <App />
       </Router>
-    </AppContainer>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );

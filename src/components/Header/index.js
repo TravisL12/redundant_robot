@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <div className="header-container">
-        <div>
+        <div style={{ display: 'flex' }}>
           <RobotCube />
           <div className="home-title">
             <Link to="/">

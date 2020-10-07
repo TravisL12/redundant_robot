@@ -1,10 +1,9 @@
-function getPx(value) {
-  return `${value}px`;
-}
+import { getPx, getPct } from './variables';
 
-export function buildRobot(headHeight = 60, robotColor = "lightblue") {
-  const eyeSideDistance = "20%";
-  const eyeTopDistance = "20%";
+export function buildRobot(headHeight = 60, robotColor = 'lightblue') {
+  const headMargin = headHeight * 0.4;
+  const eyeSideDistance = 20;
+  const eyeTopDistance = 20;
   const earThickness = getPx(headHeight * 0.2);
   const lipThickness = getPx(headHeight * 0.01);
 
@@ -12,7 +11,7 @@ export function buildRobot(headHeight = 60, robotColor = "lightblue") {
     position: absolute;
     background: yellow;
     border: 1px solid gold;
-    top: ${eyeTopDistance};
+    top: ${getPct(eyeTopDistance)};
     width: 20%;
     height: 23%;
     border-radius: 50%;
@@ -34,7 +33,7 @@ export function buildRobot(headHeight = 60, robotColor = "lightblue") {
     width: ${getPx(headHeight * 1.14)};
     height: ${getPx(headHeight)};
     border-radius: 8% 8% 3% 3%;
-    margin: 0 auto;
+    margin: ${getPx(headMargin)} auto 0;
 
     .left-ear {
       ${ear}
@@ -50,11 +49,11 @@ export function buildRobot(headHeight = 60, robotColor = "lightblue") {
     }
     .left-eye {
       ${eye}
-      left: ${eyeSideDistance};
+      left: ${getPct(eyeSideDistance)};
     }
     .right-eye {
       ${eye}
-      right: ${eyeSideDistance};
+      right: ${getPct(eyeSideDistance)};
     }
     .mouth {
       position: absolute;

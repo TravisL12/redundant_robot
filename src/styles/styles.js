@@ -4,10 +4,19 @@ import { buildRobot } from './robotMixin';
 import { color1, color5, headerHeight, fontColor } from './variables';
 
 export const AppContainer = styled.div`
-  background: ${color5};
+  position: relative;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  padding-top: ${headerHeight + 3}rem;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+`;
+
+export const Container = styled.div`
+  height: 100vh;
   font-weight: 400;
   color: ${fontColor};
-  transition: 3s linear background-color;
 
   a {
     color: ${fontColor};
@@ -38,17 +47,8 @@ export const AppContainer = styled.div`
     position: fixed;
     margin: 30rem auto;
     width: 100%;
-    z-index: -1;
     opacity: 0.3;
     ${buildRobot(250)}
-  }
-
-  .container {
-    position: relative;
-    font-size: 1.8rem;
-    padding: 2rem 0;
-    padding-top: ${headerHeight} + 3rem;
-    min-height: 100vh;
   }
 
   .home-content {
