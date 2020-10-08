@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getPx, getPct } from '../components/utilities';
+import { getPx } from '../components/utilities';
 import { buildRobot } from './robotMixin';
 import { color3, color4, color5 } from './variables';
 

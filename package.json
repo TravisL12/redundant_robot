@@ -1,5 +1,6 @@
 {
   "name": "redundant_robot",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

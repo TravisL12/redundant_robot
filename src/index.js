@@ -22,7 +22,7 @@ setInterval(() => {
 ReactDOM.render(
   <React.StrictMode>
     <Container>
-      <Router>
+      <Router basename="/create-react">
         <div className="background-robot">
           <RobotHead />
         </div>
