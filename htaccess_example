@@ -1,0 +1,14 @@
+htaccess
+
+example to allow direct linking to sites with react-router
+place the `.htaccess` file within the directory you want this to work for (in the actual subdirectory)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /<SUBDIRECTORY>/index.html [L]
+</IfModule>
