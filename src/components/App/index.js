@@ -73,9 +73,18 @@ function App() {
 
       <div className="demo-stuff">
         <div className="link">
-          <img src={`${getAsset('/assets/apod.png')}`} alt="ApodImg" />
+          <a href="https://travisl12.github.io/compare_colors/">
+            <img
+              src={`${getAsset('/assets/compare_colors.png')}`}
+              alt="CompareColors"
+            />
+          </a>
         </div>
-        <h4>Compare Colors</h4>
+        <h4>
+          <a href="https://travisl12.github.io/compare_colors/">
+            Compare Colors
+          </a>
+        </h4>
         <div className="description">
           <p>
             A tool I built to paste in a large collection of text that contains
@@ -85,27 +94,43 @@ function App() {
             is available to sort the colors using two color sorting algorithms.
             The values will be sorted based on a compared colored entered in.
           </p>
-          <p>
-            Get it for:{' '}
-            <a href="https://travisl12.github.io/compare_colors/">
-              Compare Colors
-            </a>
-          </p>
         </div>
       </div>
 
       <div className="demo-stuff">
         <div className="link">
-          <img src={`${getAsset('/assets/apod.png')}`} alt="ApodImg" />
+          <a href="https://travisl12.github.io/super_mega_baseball_charts/">
+            <img src={`${getAsset('/assets/smb_logo.png')}`} alt="SMB" />
+          </a>
         </div>
-        <h4>Super Mega Baseball 3 Rosters</h4>
+        <h4>
+          <a href="https://travisl12.github.io/super_mega_baseball_charts/">
+            Super Mega Baseball 3 Rosters
+          </a>
+        </h4>
         <div className="description">
           <p>This is the data for the game Super Mega Baseball 3.</p>
+        </div>
+      </div>
+
+      <div className="demo-stuff">
+        <div className="link">
+          <a href="https://redundantrobot.com/redundant_os">
+            <img
+              src={`${getAsset('/assets/redundant_os.png')}`}
+              alt="RedundantOs"
+            />
+          </a>
+        </div>
+        <h4>
+          <a href="https://redundantrobot.com/redundant_os">
+            Redundant Robot OS
+          </a>
+        </h4>
+        <div className="description">
           <p>
-            Get it for:{' '}
-            <a href="https://travisl12.github.io/super_mega_baseball_charts/">
-              Super Mega Baseball Rosters
-            </a>
+            Point and click your way around. Check out the preferences and some
+            CodePens.
           </p>
         </div>
       </div>
