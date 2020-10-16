@@ -19,10 +19,14 @@ setInterval(() => {
   colorIdx++;
 }, 8000);
 
+const basename = !!process.env.REACT_APP_DEPLOY_DIRECTORY
+  ? process.env.REACT_APP_DEPLOY_DIRECTORY
+  : null;
+
 ReactDOM.render(
   <React.StrictMode>
     <Container>
-      <Router basename={`/${process.env.REACT_APP_DEPLOY_DIRECTORY}` || ''}>
+      <Router basename={basename}>
         <div className="background-robot">
           <RobotHead />
         </div>
