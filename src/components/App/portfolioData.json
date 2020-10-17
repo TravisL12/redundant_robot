@@ -1,0 +1,42 @@
+[
+  {
+    "title": "SheepShaver Tutorial",
+    "isLocalLink": "true",
+    "url": "/sheepshaver",
+    "imageSrc": "sheepshaver_icon.png",
+    "description": "I wrote this Mac OS emulator tutorial in 2006 during a serious bout of graduate school procrastination. It offers up some ROMs that I have collected over the years and I do my best to help out people that who have questions."
+  },
+  {
+    "title": "Astronomy Picture of the Day Extension",
+    "imageSrc": "apod.png",
+    "description": "This is a Chrome/Firefox extension that replaces your new tab screen with a random APOD image. There are multiple key commands and buttons available for selecting another random image or to view todays picture. I am a big fan of all things outer space and I've had the APOD as my home page for years.",
+    "additionLinks": [
+      {
+        "name": "Chrome Store",
+        "url": "https://chrome.google.com/webstore/detail/apod-by-the-trav/aedpginojmhafbemcoelnppdcmlfjcdj"
+      },
+      {
+        "name": "Firefox Add-On",
+        "url": "https://addons.mozilla.org/en-US/firefox/addon/apod-by-the-trav/"
+      }
+    ]
+  },
+  {
+    "title": "Compare Colors",
+    "url": "https://travisl12.github.io/compare_colors/",
+    "imageSrc": "compare_colors.png",
+    "description": "A tool I built to paste in a large collection of text that contains colors (browser colors, hex, or rgb) and then display any colors found in that text. The colors will be split into their hex, rgb, and hsl formats that can be copied on click. Also a sorting feature is available to sort the colors using two color sorting algorithms. The values will be sorted based on a compared colored entered in."
+  },
+  {
+    "title": "Super Mega Baseball 3 Rosters",
+    "url": "https://travisl12.github.io/super_mega_baseball_charts/",
+    "imageSrc": "smb_logo.png",
+    "description": "This is the data for the game Super Mega Baseball 3."
+  },
+  {
+    "title": "Redundant Robot OS",
+    "url": "https://redundantrobot.com/redundant_os",
+    "imageSrc": "redundant_os.png",
+    "description": "Point and click your way around. Check out the preferences and some CodePens."
+  }
+]
