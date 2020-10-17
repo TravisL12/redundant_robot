@@ -96,9 +96,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1100px) {
-    .container {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   @media (max-width: 800px) {
@@ -115,23 +113,6 @@ export const Container = styled.div`
           padding-top: 5px;
           grid-column: 1;
           grid-row: 2;
-        }
-      }
-    }
-
-    .header {
-      height: 15rem;
-
-      .header-container {
-        justify-content: space-evenly;
-        flex-direction: column;
-
-        .cube-container {
-          display: none;
-        }
-
-        .home-title {
-          margin: 0;
         }
       }
     }
