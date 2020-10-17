@@ -6,11 +6,15 @@ import { color1, headerHeight, fontColor } from './variables';
 export const AppContainer = styled.div`
   position: relative;
   font-size: 1.8rem;
-  padding: 2rem 0;
-  padding-top: ${headerHeight + 3}rem;
+  padding: ${headerHeight + 3}rem 20px 0;
   min-height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 800px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 `;
 
 export const Container = styled.div`

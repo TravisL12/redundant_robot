@@ -85,11 +85,13 @@ export const HeaderContainer = styled.div`
   }
 
   @media (max-width: 800px) {
-    height: 15rem;
-
     .header-container {
       justify-content: space-evenly;
       flex-direction: column;
+
+      .social-icons {
+        display: none;
+      }
 
       .cube-container {
         display: none;
