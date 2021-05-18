@@ -25,7 +25,7 @@ export const jobs = [
     term: 'April 2019 - Current',
     location: 'San Francisco',
     description: `I was on the Marketplace Experimentation team and built out their
-        experimentation platform. My work included building out mocks, and implenting features backend
+        experimentation platform. My work included building out mocks, and implementing features backend
         to frontend. My final feature built was a "tags" system in which I built the tables, migrated the database,
         and implemented the UI.`,
   },
@@ -45,20 +45,20 @@ export const jobs = [
     name: 'Sincerely Inc.',
     title: 'Full Stack Developer',
     term: 'May 2014 - November 2016',
-    location: 'San Andreas',
+    location: 'San Francisco',
     description: `
       I rewrote Sincerely's internal Admin system as a web client using AngularJS and Grunt.
       During this time I began working with PHP to build out API endpoints needed for
       the Admin client to interface with. My backend work also included MySQL database
       management including writing migrations and querying the database directly.
-      My final project was rebuiling www.sincerely.com as a web client using AngularJS.
+      My final project was rebuilding www.sincerely.com as a web client using AngularJS.
     `,
   },
   {
     name: '50 Cubes Inc.',
     title: 'Junior Developer',
     term: 'October 2013 - April 2014',
-    location: 'San Andreas',
+    location: 'San Francisco',
     description: `
           I used the MEAN stack to create Wardrobe.me, a social network
       focused on fashion and clothing. Various ideas were prototyped
