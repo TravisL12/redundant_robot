@@ -8,6 +8,7 @@
   },
   {
     "title": "Astronomy Picture of the Day Extension",
+    "url": "https://chrome.google.com/webstore/detail/apod-by-the-trav/aedpginojmhafbemcoelnppdcmlfjcdj",
     "imageSrc": "apod.png",
     "description": "This is a Chrome/Firefox extension that replaces your new tab screen with a random APOD image. There are multiple key commands and buttons available for selecting another random image or to view todays picture. I am a big fan of all things outer space and I've had the APOD as my home page for years.",
     "additionLinks": [
@@ -23,12 +24,29 @@
   },
   {
     "title": "Mouse Odometer",
+    "url": "https://chrome.google.com/webstore/detail/mouse-odometer/eemhobgckjipmjobdocfilbfapcbkano?hl=en-US",
     "imageSrc": "mouse_icon.png",
     "description": "Track how far your mouse moves everyday and see what color mouse you can achieve!",
     "additionLinks": [
       {
         "name": "Chrome Store",
         "url": "https://chrome.google.com/webstore/detail/mouse-odometer/eemhobgckjipmjobdocfilbfapcbkano?hl=en-US"
+      }
+    ]
+  },
+  {
+    "title": "D3 Stuff!",
+    "imageSrc": "d3_pic.png",
+    "url": "https://travisl12.github.io/bar_chart/",
+    "description": "D3 is a graphing library for javascript that I have fought with on and off for over 8 years. I have finally started to understand it and here are some fun plots.",
+    "additionLinks": [
+      {
+        "name": "Demo Page",
+        "url": "https://travisl12.github.io/bar_chart/"
+      },
+      {
+        "name": "GH Repo",
+        "url": "https://www.github.com/travisl12/bar_chart/"
       }
     ]
   },
