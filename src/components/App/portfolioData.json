@@ -22,6 +22,17 @@
     ]
   },
   {
+    "title": "Mouse Odometer",
+    "imageSrc": "mouse_icon.png",
+    "description": "Track how far your mouse moves everyday and see what color mouse you can achieve!",
+    "additionLinks": [
+      {
+        "name": "Chrome Store",
+        "url": "https://chrome.google.com/webstore/detail/apod-by-the-trav/aedpginojmhafbemcoelnppdcmlfjcdj"
+      }
+    ]
+  },
+  {
     "title": "Compare Colors",
     "url": "https://travisl12.github.io/compare_colors/",
     "imageSrc": "compare_colors.png",
