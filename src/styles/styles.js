@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { buildRobot } from './robotMixin';
+import styled from "styled-components";
+import { buildRobot } from "./robotMixin";
 
-import { color1, headerHeight, fontColor } from './variables';
+import { color1, headerHeight, fontColor } from "./variables";
 
 export const AppContainer = styled.div`
   position: relative;
@@ -26,11 +26,12 @@ export const Container = styled.div`
     color: ${fontColor};
     text-decoration: none;
     display: inline-block;
-    border-bottom: 1px solid;
     line-height: 1.5rem;
     transition: 0.15s all linear;
+    border-bottom: 1px solid;
     &:hover {
       color: ${color1};
+      border-width: 3px;
     }
   }
 
@@ -63,10 +64,6 @@ export const Container = styled.div`
       grid-column-gap: 20px;
       margin-bottom: 20px;
 
-      a {
-        border-bottom: none;
-      }
-
       h4 {
         margin: 0;
         text-transform: uppercase;
@@ -83,6 +80,11 @@ export const Container = styled.div`
           margin: 0;
           font-size: 1.6rem;
         }
+
+        ul {
+          display: flex;
+          gap: 20px;
+        }
       }
 
       .link {
@@ -91,7 +93,9 @@ export const Container = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: center;
-
+        a {
+          border: none;
+        }
         img {
           width: 100%;
         }
