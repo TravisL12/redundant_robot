@@ -51,8 +51,8 @@
     ]
   },
   {
-    "title": "Compare Colors",
-    "url": "https://travisl12.github.io/compare_colors/",
+    "title": "Chroma Extract",
+    "url": "https://redundantrobot.com/chroma_extract",
     "imageSrc": "compare_colors.png",
     "description": "A tool I built to paste in a large collection of text that contains colors (browser colors, hex, or rgb) and then display any colors found in that text. The colors will be split into their hex, rgb, and hsl formats that can be copied on click. Also a sorting feature is available to sort the colors using two color sorting algorithms. The values will be sorted based on a compared colored entered in."
   },
