@@ -7,17 +7,17 @@
     "description": "I wrote this Mac OS emulator tutorial in 2006 during a serious bout of graduate school procrastination. It offers up some ROMs that I have collected over the years and I do my best to help out people that who have questions."
   },
   {
-    "title": "Astronomy Picture of the Day Extension",
+    "title": "APOD Extension",
     "url": "https://chrome.google.com/webstore/detail/apod-by-the-trav/aedpginojmhafbemcoelnppdcmlfjcdj",
     "imageSrc": "apod.png",
-    "description": "This is a Chrome/Firefox extension that replaces your new tab screen with a random APOD image. There are multiple key commands and buttons available for selecting another random image or to view todays picture. I am a big fan of all things outer space and I've had the APOD as my home page for years.",
+    "description": "This is an Astronomy Picture of the Day (APOD) Chrome/Firefox extension that replaces your new tab screen with a random APOD image. There are multiple key commands and buttons available for selecting another random image or to view todays picture. I am a big fan of all things outer space and I've had the APOD as my home page for years.",
     "additionLinks": [
       {
-        "name": "Chrome Store",
+        "name": "Chrome",
         "url": "https://chrome.google.com/webstore/detail/apod-by-the-trav/aedpginojmhafbemcoelnppdcmlfjcdj"
       },
       {
-        "name": "Firefox Add-On",
+        "name": "Firefox",
         "url": "https://addons.mozilla.org/en-US/firefox/addon/apod-by-the-trav/"
       }
     ]
@@ -29,7 +29,7 @@
     "description": "Track how far your mouse moves everyday and see what color mouse you can achieve!",
     "additionLinks": [
       {
-        "name": "Chrome Store",
+        "name": "Chrome",
         "url": "https://chrome.google.com/webstore/detail/mouse-odometer/eemhobgckjipmjobdocfilbfapcbkano?hl=en-US"
       }
     ]

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { getAsset } from '../utilities';
+import React from "react";
+import { Link } from "react-router-dom";
+import { getAsset } from "../utilities";
 
 const SiteLink = ({ isLocalLink, url, children }) => {
   if (!url) {
@@ -31,22 +31,28 @@ const PortfolioSite = ({
           <img src={getAsset(`/assets/${imageSrc}`)} alt={title} />
         </SiteLink>
       </div>
-      <h4>
-        <SiteLink isLocalLink={isLocalLink} url={url}>
-          {title}
-        </SiteLink>
-      </h4>
+      <div className="demo-stuff__title">
+        <h4>
+          {additionLinks ? (
+            title
+          ) : (
+            <SiteLink isLocalLink={isLocalLink} url={url}>
+              {title}
+            </SiteLink>
+          )}
+        </h4>
+        {additionLinks && (
+          <div className="additional-links">
+            {additionLinks?.map((link) => (
+              <div key={link.url}>
+                <SiteLink url={link.url}>{link.name}</SiteLink>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
       <div className="description">
         <p>{description}</p>
-        {additionLinks && (
-          <ul>
-            {additionLinks.map((link) => (
-              <li>
-                <SiteLink url={link.url}>{link.name}</SiteLink>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </div>
   );

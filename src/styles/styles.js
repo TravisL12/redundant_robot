@@ -64,11 +64,24 @@ export const Container = styled.div`
       grid-column-gap: 20px;
       margin-bottom: 20px;
 
-      h4 {
-        margin: 0;
-        text-transform: uppercase;
-        grid-row: 1;
-        grid-column: 2;
+      .demo-stuff__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        h4 {
+          margin: 0;
+          text-transform: uppercase;
+          grid-row: 1;
+          grid-column: 2;
+        }
+
+        .additional-links {
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
       }
 
       .description {
@@ -112,8 +125,9 @@ export const Container = styled.div`
       .demo-stuff {
         grid-template-columns: 80px 1fr;
 
-        h4 {
+        .demo-stuff__title {
           grid-column: 1 / span 2;
+          grid-row: 1;
         }
 
         .link {
