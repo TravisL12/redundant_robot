@@ -25,13 +25,13 @@ const PortfolioSite = ({
   isLocalLink,
 }) => {
   return (
-    <div className="demo-stuff">
+    <div className="project">
       <div className="link">
         <SiteLink isLocalLink={isLocalLink} url={url}>
           <img src={getAsset(`/assets/${imageSrc}`)} alt={title} />
         </SiteLink>
       </div>
-      <div className="demo-stuff__title">
+      <div className="project__title">
         <h4>
           {additionLinks ? (
             title
