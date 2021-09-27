@@ -1,9 +1,9 @@
-import React from 'react';
-import { getAsset } from '../utilities';
+import React from "react";
+import { getAsset } from "../utilities";
 
-const WelcomeToMac = getAsset('/assets/sheepshaver/welcome-to-mac.jpg');
+const WelcomeToMac = getAsset("/assets/sheepshaver/welcome-to-mac.jpg");
 const BasiliskPreference = getAsset(
-  '/assets/sheepshaver/basiliskPreference.jpg'
+  "/assets/sheepshaver/basiliskPreference.jpg"
 );
 
 const SheepShaver = () => (
@@ -15,44 +15,38 @@ const SheepShaver = () => (
     </div>
 
     <div className="text">
-      <h4>Update August 7, 2016</h4>
+      <h4>Update September 27, 2021</h4>
       <p>
-        I've trimmed down this tutorial considerably to focus on what is most
-        important. I feel that most of the tutorial was out of date with the
-        docs for Basilisk or SheepShaver and so you're better looking there for
-        guidance on how to get the apps running. Ultimately I feel the biggest
-        help that I can provide here are the ROMs and disk images. But maybe I'm
-        wrong, <a href="https://twitter.com/travisl12">let me know</a>.
+        In the first update in nearly 6 years I wanted to update my links. Since
+        I introduced this tutorial in 2005 (wow!) I have recieved many emails
+        and tweets from all over the world and I have enjoyed all of them. I'm
+        still open for business and available to help when I can.{" "}
+        <a href="https://twitter.com/travisl12">Let me know</a>.
       </p>
     </div>
 
     <div className="text">
-      <h4>Getting Started</h4>
+      <h4>Basilisk II</h4>
       <p>
-        If you've downloaded{' '}
-        <a href="http://basilisk.cebix.net/">Basilisk II</a> (
-        <a href="http://www.emaculation.com/forum/viewtopic.php?f=6&t=7361&sid=89e92b23a3a058811d74b286fe8fb2cd">
+        Get Basilisk II (
+        <a href="https://www.emaculation.com/forum/viewtopic.php?f=6&t=7361&sid=89e92b23a3a058811d74b286fe8fb2cd">
           Download)
-        </a>{' '}
-        or <a href="http://sheepshaver.cebix.net/">SheepShaver</a> (
+        </a>
+        . It also is likely that you need Basilisk II GUI (
+        <a href="https://www.emaculation.com/forum/viewtopic.php?f=6&t=10454">
+          Download
+        </a>
+        ).
+      </p>
+      <h4>SheepShaver</h4>
+      <p>
+        Get SheepShaver (
         <a href="http://www.emaculation.com/forum/viewtopic.php?f=20&t=7360">
           Download
         </a>
-        ) you may be dreaming about Getting your old Mac Software up and running
-        huh? But where to start? With your modern Mac you start opening up the
-        Emulators and start getting to it only to realize that you need a few
-        things don't you?
+        )
       </p>
     </div>
-
-    <ul>
-      <li>Emulator Software</li>
-      <li>Old Mac OS (typically System 7 – System 9.0)</li>
-      <li>A Startup Disk</li>
-      <li>Create a Hard Drive Image</li>
-      <li>An Old Mac ROM (which might sound confusing)</li>
-      <li>A Way to get old Software onto your New Mac!</li>
-    </ul>
 
     <div className="text">
       <h4>The Right ROM for the Right Emulator</h4>
@@ -72,7 +66,7 @@ const SheepShaver = () => (
       <li>
         <a href="https://www.redundantrobot.com/sheepshaver_files/roms/newworld86.rom.zip">
           New World PPC ROM
-        </a>{' '}
+        </a>{" "}
         (best for SheepShaver)
       </li>
       <li>
@@ -83,7 +77,7 @@ const SheepShaver = () => (
       <li>
         <a href="https://www.redundantrobot.com/sheepshaver_files/roms/1mbMacrom.zip">
           Performa ROM
-        </a>{' '}
+        </a>{" "}
         (I've experienced best Results with Basilisk II)
       </li>
       <li>
@@ -99,7 +93,7 @@ const SheepShaver = () => (
       <li>
         <a href="https://www.redundantrobot.com/sheepshaver_files/roms/vmac.rom.zip">
           Mac Classic ROM
-        </a>{' '}
+        </a>{" "}
         (Never gotten this to really work, but I'll include it)
       </li>
     </ul>
@@ -112,14 +106,14 @@ const SheepShaver = () => (
 
     <ul>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/disk_images/MacStartupOS7.img">
-          MacStartupImage (30mb)
+        <a href="https://www.redundantrobot.com/sheepshaver_files/disk_images/MacBootSystem7_5_5.img">
+          MacStartupImage (167mb)
         </a>
       </li>
       <li>
         <a href="https://www.redundantrobot.com/sheepshaver_files/disk_images/OS9.img">
-          Mac OS 9 Boot Image (120 megs)
-        </a>{' '}
+          Mac OS 9 Boot Image (512 mb)
+        </a>{" "}
         (Bootable Image For SheepShaver! Download place in Volumes and hit
         Start!)
       </li>
