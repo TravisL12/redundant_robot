@@ -1,11 +1,11 @@
-import React from 'react';
-import { ResumeContainer } from '../../styles/resume';
-import { getAsset } from '../utilities';
-import { jobs, education } from './info';
+import React from "react";
+import { ResumeContainer } from "../../styles/resume";
+import { getAsset } from "../utilities";
+import { jobs, education, skills, additionalSkills } from "./info";
 
 const Resume = () => (
   <>
-    <a href={getAsset('/assets/resume/travis_lawrence_resume.pdf')}>
+    <a href={getAsset("/assets/resume/travis_lawrence_resume.pdf")}>
       PDF Version
     </a>
     <ResumeContainer>
@@ -62,14 +62,18 @@ const Resume = () => (
             <div className="skill-set panel">
               <h1>EXPERTISE</h1>
               <ul>
-                <li>react js</li>
-                <li>typescript / flow</li>
-                <li>jest / enzyme</li>
-                <li>redux</li>
-                <li>styled components</li>
-                <li>webkit / gulp / grunt</li>
-                <li>ruby / php / python / go</li>
-                <li>mysql</li>
+                {skills.map(({ name }) => (
+                  <li>{name}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="skill-set panel">
+              <h1>ADD. SKILLS</h1>
+              <ul>
+                {additionalSkills.map(({ name }) => (
+                  <li>{name}</li>
+                ))}
               </ul>
             </div>
 
@@ -78,7 +82,7 @@ const Resume = () => (
               {education.map((edu, idx) => {
                 return (
                   <div className="education-item" key={idx}>
-                    <p className="degree">{edu.degree || ''}</p>
+                    <p className="degree">{edu.degree || ""}</p>
                     <p className="school">{edu.school}</p>
                     <p className="year">{edu.year}</p>
                     <p className="location">{edu.location}</p>
@@ -98,17 +102,19 @@ const Resume = () => (
             </div>
             <div className="work-experience panel" id="experience">
               <h1>EXPERIENCE</h1>
-              {jobs.map((job, idx) => {
-                return (
-                  <div className="experience" key={idx}>
-                    <p className="company">
-                      {job.name} / {job.title}
-                    </p>
-                    <p className="title">{job.term}</p>
-                    <p className="description">{job.description}</p>
-                  </div>
-                );
-              })}
+              {jobs
+                .filter((j) => !j.hide)
+                .map((job, idx) => {
+                  return (
+                    <div className="experience" key={idx}>
+                      <p className="company">
+                        {job.name} / {job.title}
+                      </p>
+                      <p className="title">{job.term}</p>
+                      <p className="description">{job.description}</p>
+                    </div>
+                  );
+                })}
             </div>
             <div className="other-experience panel">
               <h1>ADDITIONAL STUFF</h1>
