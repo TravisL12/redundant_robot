@@ -1,6 +1,7 @@
 import React from "react";
 import { getAsset } from "../utilities";
 
+const AWS_BASE_URL = `https://smb4.s3.us-west-2.amazonaws.com`;
 const WelcomeToMac = getAsset("/assets/sheepshaver/welcome-to-mac.jpg");
 const BasiliskPreference = getAsset(
   "/assets/sheepshaver/basiliskPreference.jpg"
@@ -59,39 +60,41 @@ const SheepShaver = () => (
 
     <ul>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/mac_oldworld_rom4mb.rom.zip">
+        <a
+          href={`${AWS_BASE_URL}/sheepshaver/apple_roms/mac_oldworld_rom4mb.rom.zip`}
+        >
           Old World 4mb ROM
         </a>
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/newworld86.rom.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/newworld86.rom.zip`}>
           New World PPC ROM
         </a>{" "}
         (best for SheepShaver)
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/Apple2e.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/Apple2e.zip`}>
           Apple II ROM
         </a>
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/1mbMacrom.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/1mbMacrom.zip`}>
           Performa ROM
         </a>{" "}
         (I've experienced best Results with Basilisk II)
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/Quad650.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/Quad650.zip`}>
           Quadra 650 ROM
         </a>
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/Quadra.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/Quadra.zip`}>
           Quadra 900 ROM
         </a>
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/roms/vmac.rom.zip">
+        <a href={`${AWS_BASE_URL}/sheepshaver/apple_roms/vmac.rom.zip`}>
           Mac Classic ROM
         </a>{" "}
         (Never gotten this to really work, but I'll include it)
@@ -106,12 +109,14 @@ const SheepShaver = () => (
 
     <ul>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/disk_images/MacBootSystem7_5_5.img">
+        <a
+          href={`${AWS_BASE_URL}/sheepshaver/os_images/MacBootSystem7_5_5.img`}
+        >
           MacStartupImage (167mb)
         </a>
       </li>
       <li>
-        <a href="https://www.redundantrobot.com/sheepshaver_files/disk_images/OS9.img">
+        <a href={`${AWS_BASE_URL}/sheepshaver/os_images/OS9.img`}>
           Mac OS 9 Boot Image (512 mb)
         </a>{" "}
         (Bootable Image For SheepShaver! Download place in Volumes and hit
