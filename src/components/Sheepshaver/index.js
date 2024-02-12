@@ -102,27 +102,8 @@ const SheepShaver = () => (
     </ul>
 
     <div className="text">
-      <p>
-        I'll save everyone some time with a bootable Mac OS 7 and 9 disk image.
-      </p>
+      <p>Sorry I had to remove the startup images.</p>
     </div>
-
-    <ul>
-      <li>
-        <a
-          href={`${AWS_BASE_URL}/sheepshaver/os_images/MacBootSystem7_5_5.img`}
-        >
-          MacStartupImage (167mb)
-        </a>
-      </li>
-      <li>
-        <a href={`${AWS_BASE_URL}/sheepshaver/os_images/OS9.img`}>
-          Mac OS 9 Boot Image (512 mb)
-        </a>{" "}
-        (Bootable Image For SheepShaver! Download place in Volumes and hit
-        Start!)
-      </li>
-    </ul>
 
     <div className="image-container">
       <img src={BasiliskPreference} alt="Basilisk Prefs" />
