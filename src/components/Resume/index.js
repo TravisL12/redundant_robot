@@ -84,7 +84,7 @@ const Resume = () => (
                   <div className="education-item" key={idx}>
                     <p className="degree">{edu.degree || ""}</p>
                     <p className="school">{edu.school}</p>
-                    <p className="year">{edu.year}</p>
+                    {/* <p className="year">{edu.year}</p> */}
                     <p className="location">{edu.location}</p>
                   </div>
                 );
