@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { headerHeight, black, color6 } from './variables';
+import styled from "styled-components";
+import { headerHeight, black, color6 } from "./variables";
 
 export const HeaderContainer = styled.div`
   position: fixed;
@@ -49,10 +49,8 @@ export const HeaderContainer = styled.div`
         }
 
         span {
-          position: absolute;
           font-size: 1.4rem;
-          top: 35px;
-          opacity: 0;
+          opacity: 0.25;
           color: ${black};
         }
 

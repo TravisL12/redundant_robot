@@ -23,10 +23,10 @@
     ]
   },
   {
-    "title": "Chroma Extract",
-    "url": "https://redundantrobot.com/chroma_extract",
-    "imageSrc": "compare_colors.png",
-    "description": "A tool I built to paste in a large collection of text that contains colors (browser colors, hex, or rgb) and then display any colors found in that text. The colors will be split into their hex, rgb, and hsl formats that can be copied on click. Also a sorting feature is available to sort the colors using two color sorting algorithms. The values will be sorted based on a compared colored entered in."
+    "title": "Really Epic Hardball (SMB4)",
+    "url": "https://reallyepichardball.com",
+    "imageSrc": "reallyEpic.png",
+    "description": "This is the rosters, teams, biographies, and traits of players from Super Mega Baseball 4"
   },
   {
     "title": "Super Mega Baseball 3 Rosters",
@@ -35,16 +35,10 @@
     "description": "This is the data for the game Super Mega Baseball 3."
   },
   {
-    "title": "Really Epic Hardball (SMB4)",
-    "url": "https://reallyepichardball.com",
-    "imageSrc": "reallyEpic.png",
-    "description": "This is the rosters, teams, biographies, and traits of players from Super Mega Baseball 4"
-  },
-  {
     "title": "Mouse Odometer",
     "url": "https://chrome.google.com/webstore/detail/mouse-odometer/eemhobgckjipmjobdocfilbfapcbkano?hl=en-US",
     "imageSrc": "mouse_icon.png",
-    "description": "Track how far your mouse moves everyday and see what color mouse you can achieve!",
+    "description": "A chrome extension that tracks how far your mouse moves everyday!",
     "additionLinks": [
       {
         "name": "Chrome",
@@ -53,25 +47,33 @@
     ]
   },
   {
-    "title": "D3 Stuff!",
-    "imageSrc": "d3_pic.png",
-    "url": "https://travisl12.github.io/bar_chart/",
-    "description": "D3 is a graphing library for javascript that I have fought with on and off for over 8 years. I have finally started to understand it and here are some fun plots.",
+    "title": "Eye See You",
+    "url": "https://chromewebstore.google.com/detail/eye-see-you/meggkmlcgnjmlfflpfgolmfdaehoclia",
+    "imageSrc": "googly_eyes.png",
+    "description": "A chrome extension that will add googley eyes to random faces detected automatically as you browse web pages.",
     "additionLinks": [
       {
-        "name": "Demo Page",
-        "url": "https://travisl12.github.io/bar_chart/"
-      },
-      {
-        "name": "GH Repo",
-        "url": "https://www.github.com/travisl12/bar_chart/"
+        "name": "Chrome",
+        "url": "https://chromewebstore.google.com/detail/eye-see-you/meggkmlcgnjmlfflpfgolmfdaehoclia"
       }
     ]
   },
   {
-    "title": "Redundant Robot OS",
-    "url": "https://redundantrobot.com/redundant_os",
-    "imageSrc": "redundant_os.png",
-    "description": "Point and click your way around. Check out the preferences and some CodePens."
+    "title": "Subseek",
+    "url": "https://chromewebstore.google.com/detail/subseek/oakebagpkfjopemoebopojkfdbiojebn",
+    "imageSrc": "subseek.png",
+    "description": "A chrome extension for Plex that allows you to seek to parts of a movie by searching the subtitles.",
+    "additionLinks": [
+      {
+        "name": "Chrome",
+        "url": "https://chromewebstore.google.com/detail/subseek/oakebagpkfjopemoebopojkfdbiojebn"
+      }
+    ]
+  },
+  {
+    "title": "Chroma Extract",
+    "url": "https://redundantrobot.com/chroma_extract",
+    "imageSrc": "compare_colors.png",
+    "description": "A tool I built to paste in a large collection of text that contains colors (browser colors, hex, or rgb) and then display any colors found in that text. The colors will be split into their hex, rgb, and hsl formats that can be copied on click. Also a sorting feature is available to sort the colors using two color sorting algorithms. The values will be sorted based on a compared colored entered in."
   }
 ]

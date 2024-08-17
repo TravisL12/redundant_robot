@@ -8,7 +8,7 @@ export const AppContainer = styled.div`
   font-size: 1.8rem;
   padding: ${headerHeight + 3}rem 20px 0;
   min-height: 100vh;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
 
   @media (max-width: 800px) {
@@ -58,9 +58,9 @@ export const Container = styled.div`
 
   .home-content {
     .demo-projects {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
 
       .project {
         display: grid;
@@ -130,8 +130,8 @@ export const Container = styled.div`
       display: none;
     }
     .home-content {
-      .demo-stuff {
-        grid-template-columns: 80px 1fr;
+      .demo-projects {
+        grid-template-columns: 1fr;
 
         .demo-stuff__title {
           grid-column: 1 / span 2;
